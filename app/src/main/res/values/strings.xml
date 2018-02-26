@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">milNSE</string>
+    <string name="Actividad2">Selección de vino</string>
+    <string name="User">Iniciar sesión:</string>
+    <string name="N1">Nº de silla</string>
+    <string name="N2">Nº de mesa</string>
+    <string name="Vino">Seleccione su vino:</string>
+    <string name="descripcio_imagen">Loggin</string>
+
+    <!-- Strings para activity_aboutus.xml -->
+    <string name="Aboutus">Sobre nosotros</string>
+    <string name="equipo">Nuestro equipo</string>
+    <string name="contentAbout">Contra viento y marea, ordenadores a pedales y mucha paciencia, logramos superar la
+        frustración para acabar esta aplicación. Muchas gracias por utilizarla y confiar en nosotros</string>
+    <string name="jesus">Jesús "Chus"</string>
+    <string name="dani">Daniel "Dani"</string>
+    <string name="dario">Darío </string>
+    <string name="javi">Javi "AckeeSinger"</string>
+    <string name="manu">Manuel "Manu"</string>
+    <string name="miriam">Miriam "Svan"</string>
+    <string name="sergio">Sergio</string>
+    <string name="tino">Tino "Brionnes"</string>
+    <string name="nuestroprofe">¡Y nuestro profe!</string>
+    <string name="kike">Kike Lizano</string>
+    <string name="dudasres">Que respondió a todas nuestras cansinas dudas sin quejarse</string>
+    <string name="menciones">Menciones especiales</string>
+    <string name="menciones_content">Gracias al Ayuntamiento de Alcázar de San Juan, al Centro de Empresas, a la Junta de
+    Comunidades de Castilla La Mancha, y al Fondo Europeo de Garantía Juvenil por hacer posible este genial curso de creación
+    de Apps Android</string>
+    <!-- Aquí acaban las strings de activity_aboutus.xml -->
+
+
+    <!-- Strings para el splash -->
+    <string name="bienvenido">¡Eres UNO de los 1000!</string>ng>
+
+
+</resources>

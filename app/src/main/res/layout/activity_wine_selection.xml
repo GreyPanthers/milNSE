@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/eti_nombreA"
+                android:textSize="25dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Vino"
+        style="@style/Texto1"
+        android:id="@+id/TextView1"/>
+
+    <ImageButton
+        android:id="@+id/Corcho1"
+        android:onClick="bInfor"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/TextView1"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/estado_corcho_1"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:checked="false" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:id="@+id/Corcho2"
+        android:src="@drawable/estado_corcho_2"
+        android:background="#0000"
+        android:layout_below="@id/TextView1"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:checked="false" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:id="@+id/Corcho3"
+        android:src="@drawable/estado_corcho_3"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/TextView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:id="@+id/Corcho4"
+        android:src="@drawable/estado_corcho_4"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:layout_below="@+id/Corcho1"
+        android:layout_marginLeft="60dp"/>
+
+    <ImageButton
+        android:id="@+id/Corcho5"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Corcho2"
+        android:src="@drawable/estado_corcho_5"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/Corcho6"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Corcho3"
+        android:src="@drawable/estado_corcho_6"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"/>
+
+    <ImageButton
+        android:id="@+id/Corcho7"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Corcho4"
+        android:src="@drawable/estado_corcho_7"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="60dp"/>
+
+    <ImageButton
+        android:id="@+id/Corcho8"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Corcho5"
+        android:src="@drawable/estado_corcho_8"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/Corcho9"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Corcho6"
+        android:src="@drawable/estado_corcho_9"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"/>
+
+    <ImageButton
+        android:id="@+id/Corcho10"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/Corcho7"
+        android:layout_marginLeft="60dp"
+        android:background="#0000"
+        android:src="@drawable/estado_corcho_10"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/shape2"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

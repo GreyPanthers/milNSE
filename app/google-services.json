@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "943007264711",
+    "firebase_url": "https://fir-1-9693e.firebaseio.com",
+    "project_id": "fir-1-9693e",
+    "storage_bucket": "fir-1-9693e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943007264711:android:ee101b1064fd0b10",
+        "android_client_info": {
+          "package_name": "es.alcazardesanjuan.firebase1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943007264711-6gjo0qovpn9drrl5nr6a4p7uag6o8uub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.alcazardesanjuan.firebase1",
+            "certificate_hash": "6a93e7439d09062cde24d638dfdfe53bae9842d9"
+          }
+        },
+        {
+          "client_id": "943007264711-12uga7ithfsfo0s356blsa4t41saan0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2CBInG94gOZB5dxy_yMp7KXXa9T5anZo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943007264711-12uga7ithfsfo0s356blsa4t41saan0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
