@@ -65,9 +65,9 @@ public class valoracionVinoUno extends AppCompatActivity {
 
     private void setLisData() {
         arrayList = new ArrayList<valoraciones>();
-        arrayList.add(new valoraciones(1, "Avenger 2: Age of Ultron", "USA", R.drawable.iconoolfatocalidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Ant man", "USA", R.drawable.iconoolfatointensidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Ted 2", "USA", R.drawable.iconobocaintensidadxxxhdpi));
+        arrayList.add(new valoraciones(7, "Avenger 2: Age of Ultron", "USA", R.drawable.iconoolfatocalidadxxxhdpi));
+        arrayList.add(new valoraciones(7, "Ant man", "USA", R.drawable.iconoolfatointensidadxxxhdpi));
+        arrayList.add(new valoraciones(7, "Ted 2", "USA", R.drawable.iconobocaintensidadxxxhdpi));
         arrayList.add(new valoraciones(1, "Cities In Love", "China", R.drawable.iconobocacalidadxxxhdpi));
         arrayList.add(new valoraciones(1, "Attack on Titan 2: End of the World", "Japan", R.drawable.iconobocapersistenciaxxxhdpi));
         arrayList.add(new valoraciones(1, "Dragon Ball Z: The Fall of Men", "France", R.drawable.iconovistaxxxhdpi));

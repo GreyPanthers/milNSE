@@ -83,7 +83,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolderDatos> {
             super(itemView);
 
             Votacion=(TextView) itemView.findViewById(R.id.txt_valoracion);
-            Valoracion=(TextView)itemView.findViewById(R.id.et_valoracion);
+            Valoracion=(EditText)itemView.findViewById(R.id.et_valoracion);
             imagen=(ImageView)itemView.findViewById(R.id.image_lista);
             Rating=(RatingBar)itemView.findViewById(R.id.MyRatingBar);
 
