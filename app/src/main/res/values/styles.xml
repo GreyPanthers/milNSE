@@ -97,5 +97,11 @@
         <item name="android:progressDrawable">@drawable/rating</item>
     </style>
 
+    <style name="boton_us">
+        <item name="android:color">#ffffff</item>
+        <item name="android:background">#b72d2d</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>

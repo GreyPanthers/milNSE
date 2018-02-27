@@ -73,13 +73,13 @@ public class valoracionVinoUno extends AppCompatActivity {
 
     private void setLisData() {
         arrayList = new ArrayList<valoraciones>();
-        arrayList.add(new valoraciones(1, "Dragon Ball Z: The Fall of Men", "France", R.drawable.iconovistaxxxhdpi));
-        arrayList.add(new valoraciones(7, "Avenger 2: Age of Ultron", "USA", R.drawable.iconoolfatointensidadxxxhdpi));
-        arrayList.add(new valoraciones(7, "Ant man", "USA", R.drawable.iconoolfatocalidadxxxhdpi));
-        arrayList.add(new valoraciones(7, "Ted 2", "USA", R.drawable.iconobocaintensidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Cities In Love", "China", R.drawable.iconobocacalidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Attack on Titan 2: End of the World", "Japan", R.drawable.iconobocapersistenciaxxxhdpi));
-        arrayList.add(new valoraciones(1, "Hitman: Agent 47", "USA",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi));
+        arrayList.add(new valoraciones(1, "Eliminado", "France", R.drawable.iconovistaxxxhdpi, "Vista"));
+        arrayList.add(new valoraciones(2, "Insuficiente", "USA", R.drawable.iconoolfatointensidadxxxhdpi, "Olfato Intensidad"));
+        arrayList.add(new valoraciones(3, "Regular", "USA", R.drawable.iconoolfatocalidadxxxhdpi,"Olfato Calidad"));
+        arrayList.add(new valoraciones(4, "Correcto", "USA", R.drawable.iconobocaintensidadxxxhdpi, "Boca Intensidad"));
+        arrayList.add(new valoraciones(5, "Bueno", "China", R.drawable.iconobocacalidadxxxhdpi, "Boca Calidad"));
+        arrayList.add(new valoraciones(6, "Muy Bueno", "Japan", R.drawable.iconobocapersistenciaxxxhdpi, "Boca Persistencia"));
+        arrayList.add(new valoraciones(7, "Excelente", "USA",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi, "Armonía / Percepcion Global"));
 
     }
 }

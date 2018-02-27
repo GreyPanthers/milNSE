@@ -11,12 +11,14 @@ public class valoraciones  {
         private String valoracion;
         private String observacion;
         private int imagen;
+        private String tituloicono;
 
-        public valoraciones(int ratingStar, String valoracion, String observacion, int imagen) {
+        public valoraciones(int ratingStar, String valoracion, String observacion, int imagen, String tituloicono) {
             this.ratingStar = ratingStar;
             this.valoracion = valoracion;
             this.observacion = observacion;
             this.imagen=imagen;
+            this.tituloicono= tituloicono;
         }
 
         public int getImagen(){return imagen;}
@@ -45,4 +47,13 @@ public class valoraciones  {
         public void setObservacion(String country) {
             this.observacion = observacion;
         }
+
+        public String gettituloicono() {
+        return tituloicono;
+    }
+
+        public void setTituloicono(String country) {
+        this.tituloicono = tituloicono;
+    }
+
     }
