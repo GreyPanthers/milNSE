@@ -39,6 +39,8 @@
         android:id="@+id/et_valoracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/txt_valoracion"
+        android:layout_toStartOf="@id/txt_valoracion"
         android:layout_alignLeft="@+id/MyRatingBar"
         android:layout_alignStart="@+id/MyRatingBar"
         android:layout_below="@+id/MyRatingBar"
