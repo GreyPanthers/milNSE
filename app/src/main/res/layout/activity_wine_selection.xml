@@ -8,7 +8,8 @@
         android:minHeight="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:subtitleTextColor="#f4f1f1">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -17,8 +18,7 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/eti_nombreA"
                 android:textSize="25dp"
-                android:layout_alignParentRight="true"
-                android:textColor="#faf8f8"/>
+                android:layout_alignParentRight="true" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <TextView
