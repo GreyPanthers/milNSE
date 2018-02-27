@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class valoracionVinoUno extends AppCompatActivity {
@@ -22,6 +26,7 @@ public class valoracionVinoUno extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private ArrayList<valoraciones> arrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,7 @@ public class valoracionVinoUno extends AppCompatActivity {
 
         Adaptador adapter;
         adapter = new Adaptador(arrayList);
+
 
 
         recyclerView.setAdapter(adapter);
@@ -57,6 +63,8 @@ public class valoracionVinoUno extends AppCompatActivity {
                 valoraciones.setText("Valoracciones: " + valor.getValoracion());
                 observa.setText("Observaciones: " + valor.getObservacion());
                 starRate.setText("Rating: " + valor.getRatingStar());
+
+
 
                 dialog.show();
             }
