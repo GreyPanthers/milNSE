@@ -8,8 +8,7 @@
         android:minHeight="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="#fffdfd">
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -18,7 +17,8 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/eti_nombreA"
                 android:textSize="25dp"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true"
+                android:textColor="#f7f4f4"/>
         <Button
             android:layout_width="35dp"
             android:layout_height="33dp"
