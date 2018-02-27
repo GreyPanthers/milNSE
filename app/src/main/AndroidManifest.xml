@@ -10,12 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
+
         <activity
             android:name=".wineSelection"
             android:theme="@style/AppTheme.NoActionBar"></activity>
@@ -25,6 +26,17 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".valoracionVinoUno"></activity>
-    </application>
 
+    <activity
+        android:name=".SplashWine"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    </application>
 </manifest>
+
+

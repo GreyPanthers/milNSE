@@ -77,8 +77,9 @@
     <style name="Text_splash">
         <item name="android:textSize">30sp</item>
         <item name="android:layout_marginTop">10dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">bold</item>
 
     </style>
 

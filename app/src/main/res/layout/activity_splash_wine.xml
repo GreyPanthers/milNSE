@@ -8,7 +8,7 @@ android:paddingLeft="16dp"
 android:paddingRight="16dp"
 android:paddingTop="16dp"
 android:background="@color/colorPrimaryDark"
-tools:context="es.alcazardesanjuan.milnoseequivocan.SplashWine">
+    tools:context="es.alcazardesanjuan.firebase1.SplashWine">
 
 
 
