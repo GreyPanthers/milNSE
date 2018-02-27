@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/image_lista"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
         android:stepSize="1"
         android:numStars="7" />
     <TextView
@@ -31,6 +32,7 @@
         android:text="@string/bienvenido"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/MyRatingBar"/>
 
     <EditText
