@@ -74,11 +74,11 @@ public class valoracionVinoUno extends AppCompatActivity {
     private void setLisData() {
         arrayList = new ArrayList<valoraciones>();
         arrayList.add(new valoraciones(1, "Eliminado", "France", R.drawable.iconovistaxxxhdpi, "Vista"));
-        arrayList.add(new valoraciones(2, "Insuficiente", "USA", R.drawable.iconoolfatointensidadxxxhdpi, "Olfato Intensidad"));
-        arrayList.add(new valoraciones(3, "Regular", "USA", R.drawable.iconoolfatocalidadxxxhdpi,"Olfato Calidad"));
-        arrayList.add(new valoraciones(4, "Correcto", "USA", R.drawable.iconobocaintensidadxxxhdpi, "Boca Intensidad"));
+        arrayList.add(new valoraciones(2, "Insuficiente", "USA", R.drawable.iconoolfatointensidadxxxhdpi, "  Olfato  Intensidad"));
+        arrayList.add(new valoraciones(3, "Regular", "USA", R.drawable.iconoolfatocalidadxxxhdpi,"  Olfato  Calidad"));
+        arrayList.add(new valoraciones(4, "Correcto", "USA", R.drawable.iconobocaintensidadxxxhdpi, "  Boca  Intensidad"));
         arrayList.add(new valoraciones(5, "Bueno", "China", R.drawable.iconobocacalidadxxxhdpi, "Boca Calidad"));
-        arrayList.add(new valoraciones(6, "Muy Bueno", "Japan", R.drawable.iconobocapersistenciaxxxhdpi, "Boca Persistencia"));
+        arrayList.add(new valoraciones(6, "Muy Bueno", "Japan", R.drawable.iconobocapersistenciaxxxhdpi, "  Boca  Persistencia"));
         arrayList.add(new valoraciones(7, "Excelente", "USA",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi, "Armonía / Percepcion Global"));
 
     }

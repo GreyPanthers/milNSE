@@ -152,14 +152,14 @@
         android:src="@drawable/estado_corcho_10"
         android:scaleType="fitCenter"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirmar"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginRight="65dp"
-        android:background="@drawable/shape2"
-        android:layout_alignParentRight="true" />
+    <!--  <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Confirmar"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="60dp"
+         android:layout_marginRight="65dp"
+         android:background="@drawable/shape2"
+         android:layout_alignParentRight="true" /> -->
 
-</RelativeLayout>
+ </RelativeLayout>
