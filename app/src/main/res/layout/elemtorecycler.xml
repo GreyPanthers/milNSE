@@ -34,7 +34,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@+id/MyRatingBar"/>
-    
+
     <EditText
         android:id="@+id/et_valoracion"
         android:layout_width="wrap_content"
