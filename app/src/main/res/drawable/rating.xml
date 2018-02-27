@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/background" android:drawable="@drawable/estrellamarillamdpi" />
-    <item android:id="@android:id/secondaryProgress" android:drawable="@drawable/estrellamixtamdpi" />
     <item android:id="@android:id/progress" android:drawable="@drawable/estrellagrismdpi" />
+    <item android:id="@android:id/secondaryProgress" android:drawable="@drawable/estrellamixtamdpi" />
+    <item android:id="@android:id/background" android:drawable="@drawable/estrellamarillamdpi" />
 </layer-list>
