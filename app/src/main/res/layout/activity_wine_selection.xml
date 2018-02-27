@@ -16,8 +16,10 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:id="@+id/eti_nombreA"
-                android:textSize="25dp"
-                android:layout_alignParentRight="true"/>
+                android:textSize="22dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#f5f3f3"
+                />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <TextView
