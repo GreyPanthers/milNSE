@@ -33,8 +33,7 @@
             android:layout_height="1dp"
             android:layout_above="@id/bConfirmar"
             android:background="#7b1616"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:layout_alignParentEnd="true"
