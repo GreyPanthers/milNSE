@@ -17,7 +17,19 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/eti_nombreA"
                 android:textSize="25dp"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true"
+                android:textColor="#f9f6f6"/>
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="33dp"
+                android:id="@+id/us"
+                android:text="us"
+                android:onClick="aboutus"
+                style="@style/boton_us"
+                android:background="@drawable/shape"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorAccent"/>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <TextView
@@ -134,5 +146,7 @@
         android:background="#0000"
         android:src="@drawable/corcho10xhdpi"
         android:scaleType="fitCenter"/>
+
+
 
 </RelativeLayout>
