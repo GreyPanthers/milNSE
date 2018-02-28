@@ -69,6 +69,7 @@
             android:orientation="horizontal"
             android:paddingLeft="16dp">
 
+
             <Button
                 android:layout_marginTop="5dp"
                 android:id="@+id/boton_entrar"
@@ -76,6 +77,7 @@
                 android:layout_height="46dp"
                 android:background="@drawable/iniciarxxhdpi"
                 android:layout_centerHorizontal="true"/>
+
 
             <Button
                 android:id="@+id/crear_cuenta"
