@@ -73,13 +73,13 @@ public class valoracionVinoUno extends AppCompatActivity {
 
     private void setLisData() {
         arrayList = new ArrayList<valoraciones>();
-        arrayList.add(new valoraciones(1, "Eliminado", "", R.drawable.iconovistaxxxhdpi, "   Vista"));
-        arrayList.add(new valoraciones(2, "Insuficiente", "", R.drawable.iconoolfatointensidadxxxhdpi, "  Olfato  Intensidad"));
-        arrayList.add(new valoraciones(3, "Regular", "", R.drawable.iconoolfatocalidadxxxhdpi," Olfato    Calidad"));
-        arrayList.add(new valoraciones(4, "Correcto", "", R.drawable.iconobocaintensidadxxxhdpi, " Boca   Intensidad"));
-        arrayList.add(new valoraciones(5, "Bueno", "", R.drawable.iconobocacalidadxxxhdpi, "Boca Calidad"));
-        arrayList.add(new valoraciones(6, "Muy Bueno", "", R.drawable.iconobocapersistenciaxxxhdpi, " Boca       Persisten."));
-        arrayList.add(new valoraciones(7, "Excelente", "",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi, "Armonía  Percep. Global"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconovistaxxxhdpi, "   Vista"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconoolfatointensidadxxxhdpi, "  Olfato  Intensidad"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconoolfatocalidadxxxhdpi," Olfato    Calidad"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconobocaintensidadxxxhdpi, " Boca   Intensidad"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconobocacalidadxxxhdpi, "Boca Calidad"));
+        arrayList.add(new valoraciones(0, "", "", R.drawable.iconobocapersistenciaxxxhdpi, " Boca       Persisten."));
+        arrayList.add(new valoraciones(0, "", "",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi, "Armonía  Percep. Global"));
 
     }
 }
