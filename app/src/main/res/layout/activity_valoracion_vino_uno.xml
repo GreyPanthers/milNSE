@@ -24,16 +24,17 @@
             android:layout_width="110dp"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="35dp"
             android:id="@+id/bPop"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_above="@id/bConfirmar"
             android:background="#7b1616"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:layout_alignParentEnd="true"
@@ -42,8 +43,8 @@
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/bConfirmar"/>
     </RelativeLayout>
 
