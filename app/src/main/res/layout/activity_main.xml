@@ -34,12 +34,7 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:text="Desconectado" />
 
-
-
     </LinearLayout>
-
-
-
 
         <LinearLayout
             android:id="@+id/email_password_fields"
@@ -77,11 +72,9 @@
 
             <Button
                 android:id="@+id/boton_entrar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Inicio"
-                android:theme="@style/ThemeOverlay.MyDarkButton" />
+                android:layout_width="101dp"
+                android:layout_height="55dp"
+                android:background="@drawable/iniciarxxhdpi" />
 
             <Button
                 android:id="@+id/crear_cuenta"
@@ -93,14 +86,10 @@
         </LinearLayout>
         <Button
             android:id="@+id/aboutus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="101dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:text="About us"
             android:onClick="aboutus"
-            android:theme="@style/ThemeOverlay.MyDarkButton" />
-
-
-
+            android:background="@drawable/botoncreadoresxxhdpi" />
 
 </LinearLayout>
