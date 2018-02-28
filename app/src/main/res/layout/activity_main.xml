@@ -70,23 +70,30 @@
             android:paddingLeft="16dp">
 
             <Button
+                android:layout_marginTop="5dp"
                 android:id="@+id/boton_entrar"
-                android:layout_width="110dp"
-                android:layout_height="55dp"
-                android:background="@drawable/iniciarxxhdpi" />
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:background="@drawable/iniciarxxhdpi"
+                android:layout_centerHorizontal="true"/>
 
             <Button
                 android:id="@+id/crear_cuenta"
-                android:layout_width="170dp"
-                android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/botoncrearcuentaxxhdpi" />
+                android:layout_below="@+id/boton_entrar"
+                android:layout_width="150dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/botoncrearcuentaxxhdpi"
+
+               />
         </RelativeLayout>
         <Button
             android:id="@+id/aboutus"
-            android:layout_width="110dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
+            android:layout_width="72dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
             android:onClick="aboutus"
             android:background="@drawable/botoncreadoresxxhdpi" />
 
