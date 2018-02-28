@@ -19,14 +19,22 @@
 
 
         <Button
-            android:background="@drawable/shape2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Leyenda"
+            android:background="@drawable/botonleyendaxxhdpi"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/bPop"/>
+
+        <Button
+            android:background="@drawable/botonconfirmarxxhdpi"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/bConfirmar"/>
     </RelativeLayout>
 
 </LinearLayout>

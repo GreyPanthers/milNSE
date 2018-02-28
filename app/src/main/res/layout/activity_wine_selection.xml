@@ -130,19 +130,9 @@
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@id/Corcho7"
-        android:layout_marginLeft="60dp"
+        android:layout_centerHorizontal="true"
         android:background="#0000"
-        android:src="@drawable/estado_corcho_10"
+        android:src="@drawable/corcho10xhdpi"
         android:scaleType="fitCenter"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirmar"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginRight="65dp"
-        android:background="@drawable/shape2"
-        android:layout_alignParentRight="true" />
 
 </RelativeLayout>
