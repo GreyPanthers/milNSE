@@ -26,7 +26,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="35dp"
-            android:id="@+id/bPop"/>
+            android:id="@+id/bPopLeyenda"
+            android:onClick="bLeyenda"/>
 
         <View
             android:layout_width="match_parent"

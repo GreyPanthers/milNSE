@@ -48,10 +48,7 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
-    <style name="AppTheme.CustomTheme">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowCloseOnTouchOutside">true</item>
-    </style>
+
 
 
     <style name="Texto1">
@@ -102,6 +99,10 @@
         <item name="android:background">#b72d2d</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme.CustomTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
 </resources>
