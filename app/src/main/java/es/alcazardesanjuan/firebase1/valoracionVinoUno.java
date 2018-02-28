@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class valoracionVinoUno extends AppCompatActivity {
@@ -22,6 +26,7 @@ public class valoracionVinoUno extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private ArrayList<valoraciones> arrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,7 @@ public class valoracionVinoUno extends AppCompatActivity {
 
         Adaptador adapter;
         adapter = new Adaptador(arrayList);
+
 
 
         recyclerView.setAdapter(adapter);
@@ -58,6 +64,8 @@ public class valoracionVinoUno extends AppCompatActivity {
                 observa.setText("Observaciones: " + valor.getObservacion());
                 starRate.setText("Rating: " + valor.getRatingStar());
 
+
+
                 dialog.show();
             }
         };
@@ -65,13 +73,13 @@ public class valoracionVinoUno extends AppCompatActivity {
 
     private void setLisData() {
         arrayList = new ArrayList<valoraciones>();
-        arrayList.add(new valoraciones(1, "Avenger 2: Age of Ultron", "USA", R.drawable.iconoolfatocalidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Ant man", "USA", R.drawable.iconoolfatointensidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Ted 2", "USA", R.drawable.iconobocaintensidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Cities In Love", "China", R.drawable.iconobocacalidadxxxhdpi));
-        arrayList.add(new valoraciones(1, "Attack on Titan 2: End of the World", "Japan", R.drawable.iconobocapersistenciaxxxhdpi));
-        arrayList.add(new valoraciones(1, "Dragon Ball Z: The Fall of Men", "France", R.drawable.iconovistaxxxhdpi));
-        arrayList.add(new valoraciones(1, "Hitman: Agent 47", "USA",R.drawable.iconovistaxxxhdpi));
+        arrayList.add(new valoraciones(1, "Eliminado", "France", R.drawable.iconovistaxxxhdpi, "   Vista"));
+        arrayList.add(new valoraciones(2, "Insuficiente", "USA", R.drawable.iconoolfatointensidadxxxhdpi, "  Olfato  Intensidad"));
+        arrayList.add(new valoraciones(3, "Regular", "USA", R.drawable.iconoolfatocalidadxxxhdpi," Olfato    Calidad"));
+        arrayList.add(new valoraciones(4, "Correcto", "USA", R.drawable.iconobocaintensidadxxxhdpi, " Boca   Intensidad"));
+        arrayList.add(new valoraciones(5, "Bueno", "China", R.drawable.iconobocacalidadxxxhdpi, "Boca Calidad"));
+        arrayList.add(new valoraciones(6, "Muy Bueno", "Japan", R.drawable.iconobocapersistenciaxxxhdpi, " Boca       Persisten."));
+        arrayList.add(new valoraciones(7, "Excelente", "USA",R.drawable.iconoarmoniaapreciacionglobalxxxhdpi, "Armonía  Percep. Global"));
 
     }
 }

@@ -45,7 +45,6 @@
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:id="@+id/Corcho2"
-        android:onClick="bInfor2"
         android:src="@drawable/estado_corcho_2"
         android:background="#0000"
         android:layout_below="@id/TextView1"
@@ -56,7 +55,6 @@
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="100dp"
-        android:onClick="bInfor3"
         android:id="@+id/Corcho3"
         android:src="@drawable/estado_corcho_3"
         android:background="#0000"
@@ -68,7 +66,6 @@
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="100dp"
-        android:onClick="bInfor4"
         android:id="@+id/Corcho4"
         android:src="@drawable/estado_corcho_4"
         android:scaleType="fitCenter"
@@ -78,7 +75,6 @@
 
     <ImageButton
         android:id="@+id/Corcho5"
-        android:onClick="bInfor5"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@+id/Corcho2"
@@ -89,7 +85,6 @@
 
     <ImageButton
         android:id="@+id/Corcho6"
-        android:onClick="bInfor6"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@+id/Corcho3"
@@ -101,7 +96,6 @@
 
     <ImageButton
         android:id="@+id/Corcho7"
-        android:onClick="bInfor7"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@+id/Corcho4"
@@ -112,7 +106,6 @@
 
     <ImageButton
         android:id="@+id/Corcho8"
-        android:onClick="bInfor8"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@+id/Corcho5"
@@ -123,7 +116,6 @@
 
     <ImageButton
         android:id="@+id/Corcho9"
-        android:onClick="bInfor9"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@+id/Corcho6"
@@ -135,12 +127,22 @@
 
     <ImageButton
         android:id="@+id/Corcho10"
-        android:onClick="bInfor10"
         android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_below="@id/Corcho7"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
         android:background="#0000"
-        android:src="@drawable/corcho10xhdpi"
+        android:src="@drawable/estado_corcho_10"
         android:scaleType="fitCenter"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/shape2"
+        android:layout_alignParentRight="true" />
+
 </RelativeLayout>

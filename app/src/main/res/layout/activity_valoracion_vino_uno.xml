@@ -4,47 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="es.alcazardesanjuan.firebase1.valoracionVinoUno">
-
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recicler"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recicler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
 
         <Button
-            android:id="@+id/bPop"
-            android:layout_width="101dp"
-            android:layout_height="55dp"
+            android:background="@drawable/shape2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leyenda"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/botonleyendaxxhdpi" />
-
-        <Button
-            android:id="@+id/bConfirmar"
-            android:layout_width="101dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/botonconfirmarxxhdpi" />
-
+            android:id="@+id/bPop"/>
     </RelativeLayout>
 
 </LinearLayout>
