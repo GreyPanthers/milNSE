@@ -18,28 +18,17 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/eti_nombreA"
                 android:textSize="25dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:textColor="#f9f6f6"
                 android:layout_marginRight="15dp"/>
 
-            <Button
-                android:layout_width="35dp"
-                android:layout_height="33dp"
-                android:id="@+id/us"
-                android:text="+"
-                android:textSize="20dp"
-                android:onClick="aboutus"
-                style="@style/boton_us"
-                android:background="@drawable/shape"
-                android:layout_alignParentTop="true"
-                android:textColor="@color/colorAccent"/>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        >
+        android:id="@+id/relativeLayout">
 
     <TextView
 
@@ -49,7 +38,7 @@
         android:text="@string/Vino"
         style="@style/Texto1"
         android:id="@+id/TextView1"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="5dp"/>
 
     <ImageButton
         android:id="@+id/Corcho1"
@@ -158,5 +147,38 @@
         android:scaleType="fitCenter"/>
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/cerrarsesion"
+        style="@style/boton_us"
+        android:layout_width="70dp"
+        android:layout_height="33dp"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/shape"
+        android:onClick="cerrarsesion"
+        android:text="cerrar sesion"
+        android:textColor="@color/colorAccent"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/us"
+        style="@style/boton_us"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:layout_alignTop="@+id/cerrarsesion"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_toLeftOf="@+id/cerrarsesion"
+        android:layout_toStartOf="@+id/cerrarsesion"
+        android:background="@drawable/shape"
+        android:onClick="aboutus"
+        android:text="+"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp" />
 
 </RelativeLayout>
