@@ -20,7 +20,9 @@
                 android:textSize="25dp"
                 android:layout_alignParentRight="true"
                 android:textColor="#600505"
-                android:layout_marginRight="15dp"/>
+                android:centerHorizontal="true"
+                android:layout_marginRight="90dp"
+                android:layout_alignParentTop="true"/>
 
             <Button
                 android:layout_width="35dp"
