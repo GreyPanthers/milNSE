@@ -76,7 +76,7 @@
         <item name="android:textSize">30sp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:color">#ffd7d7</item>
         <item name="android:fontFamily">casual</item>
 
