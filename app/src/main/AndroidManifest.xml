@@ -10,37 +10,56 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-
         <activity
             android:name=".wineSelection"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".aboutUs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".valoracionVinoUno"></activity>
+        <activity android:name=".valoracionVinoUno"
+            android:label="Vino 1"/>
+        <activity android:name=".valoracionVinoDos"
+            android:label="Vino 2"/>
+        <activity android:name=".valoracionVinoTres"
+            android:label="Vino 3"/>
+        <activity android:name=".valoracionVinoCuatro"
+            android:label="Vino 4"/>
+        <activity android:name=".valoracionVinoCinco"
+            android:label="Vino 5"/>
+        <activity android:name=".valoracionVinoSeis"
+            android:label="Vino 6"/>
+        <activity android:name=".valoracionVinoSiete"
+            android:label="Vino 7"/>
+        <activity android:name=".valoracionVinoOcho"
+            android:label="Vino 8"/>
+        <activity android:name=".valoracionVinoNueve"
+            android:label="Vino 9"/>
+        <activity android:name=".valoracionVinoDiez"
+            android:label="Vino 10"/>
+        <activity
+            android:name=".SplashWine"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity
-        android:name=".SplashWine"
-        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-        <activity android:name=".PopLeyenda"
-            android:theme="@style/AppTheme.CustomTheme">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".PopLeyenda"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
-
-

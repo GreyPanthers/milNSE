@@ -27,14 +27,14 @@ public class valoracionVinoDos extends AppCompatActivity {
 
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference insertVista = ref.child("ValVino1").child("Vista");
-    DatabaseReference insertOlfatoIntensidad = ref.child("ValVino1").child("OlfatoInt");
-    DatabaseReference insertOlfatoCalidad = ref.child("ValVino1").child("OlfatoCal");
-    DatabaseReference insertBocaIntensidad = ref.child("ValVino1").child("BocaInt");
-    DatabaseReference insertBocaPersistencia = ref.child("ValVino1").child("BocaPer");
-    DatabaseReference insertBocaCalidad = ref.child("ValVino1").child("BocaCal");
-    DatabaseReference insertArmonia = ref.child("ValVino1").child("Armonia");
-    DatabaseReference total = ref.child("ValVino1").child("Total");
+    DatabaseReference insertVista = ref.child("ValVino2").child("Vista");
+    DatabaseReference insertOlfatoIntensidad = ref.child("ValVino2").child("OlfatoInt");
+    DatabaseReference insertOlfatoCalidad = ref.child("ValVino2").child("OlfatoCal");
+    DatabaseReference insertBocaIntensidad = ref.child("ValVino2").child("BocaInt");
+    DatabaseReference insertBocaPersistencia = ref.child("ValVino2").child("BocaPer");
+    DatabaseReference insertBocaCalidad = ref.child("ValVino2").child("BocaCal");
+    DatabaseReference insertArmonia = ref.child("ValVino2").child("Armonia");
+    DatabaseReference total = ref.child("ValVino2").child("Total");
 
 
 
@@ -524,6 +524,7 @@ public class valoracionVinoDos extends AppCompatActivity {
         else {
             Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
 }
 
