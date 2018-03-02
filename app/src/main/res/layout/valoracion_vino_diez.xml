@@ -340,28 +340,28 @@
         </RelativeLayout>
     </ScrollView>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="187dp"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
 
         <Button
             android:id="@+id/bLeyendaId"
-            android:layout_marginLeft="75dp"
-            android:layout_width="30dp"
+            android:layout_width="88dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/botonleyendaxxhdpi"
             android:onClick="bLeyenda"
             />
         <Button
-            android:layout_marginRight="75dp"
-            android:layout_width="30dp"
+            android:layout_width="90dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/botonconfirmarxxhdpi"
             android:onClick="enviar"/>
+
 
 
     </LinearLayout>
