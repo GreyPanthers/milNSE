@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="es.alcazardesanjuan.firebase1.valoracionVinoUno">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconovistaxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingVista"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/iconoolfatointensidadxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingOlfatoIntensidad"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="110dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeOlfatoIntensidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/iconoolfatocalidadxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingOlfatoCalidad"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="220dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeOlfatoCalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/iconobocaintensidadxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBocaIntensidad"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="330dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeBocaIntensidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="360dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="440dp"
+                android:background="@drawable/iconoolfatocalidadxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBocaPersistencia"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="440dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeBocaPersistencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="470dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="540dp"
+                android:background="@drawable/iconobocapersistenciaxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBocaCalidad"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="550dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeBocaCalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="580dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="640dp"
+                android:background="@drawable/iconoarmoniaapreciacionglobalxxxhdpi">
+
+            </ImageView>
+
+            <RatingBar style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingArmonia"
+                android:numStars="7"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="660dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/mensajeArmonia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="690dp"
+                android:layout_marginLeft="100dp"
+                android:hint="observaciones" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="enviar"
+                android:text="enviar"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
