@@ -2,6 +2,7 @@ package es.alcazardesanjuan.firebase1;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Movie;
 import es.alcazardesanjuan.firebase1.Adaptador;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,6 +45,15 @@ public class valoracionVinoUno extends AppCompatActivity {
 
 
         recyclerView.setAdapter(adapter);
+
+        //Botón leyenda//
+        Button b = (Button) findViewById(R.id.bPopLeyenda);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(valoracionVinoUno.this,PopLeyenda.class));
+            }
+        });
 
     }
 
