@@ -9,7 +9,8 @@
         tools:context="es.alcazardesanjuan.firebase1.valoracionVinoUno">
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -18,13 +19,23 @@
 
 
                 <ImageView
+                    android:id="@+id/iconovista"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/iconovistaxxxhdpi">
-
                 </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconovista"
+                    android:layout_alignRight="@+id/iconovista"
+                    android:layout_below="@+id/iconovista"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="21dp"
+                    android:text="vista" />
 
                 <RatingBar style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
@@ -33,7 +44,8 @@
                     android:numStars="7"
                     android:layout_marginBottom="15dp"
                     android:layout_marginLeft="100dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
