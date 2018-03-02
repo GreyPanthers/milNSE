@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="es.alcazardesanjuan.firebase1.valoracionVinoUno">
+    tools:context="es.alcazardesanjuan.firebase1.valoracionVinoDiez">
 
     <ScrollView
         android:layout_width="match_parent"
