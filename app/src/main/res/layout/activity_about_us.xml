@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="es.alcazardesanjuan.milnoseequivocan.activity_aboutus">
+    tools:context="es.alcazardesanjuan.firebase1.aboutUs">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             style="@style/Text_aboutus_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dani Elektroduende"/>
+            android:text="@string/dani"/>
 
         <TextView
             style="@style/Text_aboutus_content"
