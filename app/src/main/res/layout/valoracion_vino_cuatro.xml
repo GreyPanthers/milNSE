@@ -42,23 +42,23 @@
                 android:id="@+id/textView14" />
 
             <RatingBar
-                android:id="@+id/ratingBar1"
+                android:id="@+id/ratingVista"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar2"
-                android:layout_alignStart="@+id/ratingBar2"
+                android:layout_alignLeft="@+id/ratingOlfatoIntensidad"
+                android:layout_alignStart="@+id/ratingOlfatoIntensidad"
                 android:layout_alignTop="@+id/iconovista"
                 android:layout_gravity="center"
                 android:numStars="7" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/mensajeVista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar1"
-                android:layout_alignStart="@+id/ratingBar1"
-                android:layout_below="@+id/ratingBar1"
+                android:layout_alignLeft="@+id/ratingVista"
+                android:layout_alignStart="@+id/ratingVista"
+                android:layout_below="@+id/ratingVista"
                 android:layout_marginLeft="71dp"
                 android:layout_marginStart="71dp"
                 android:hint="" />
@@ -87,23 +87,23 @@
                 android:textSize="12sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar2"
+                android:id="@+id/ratingOlfatoIntensidad"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar3"
-                android:layout_alignStart="@+id/ratingBar3"
+                android:layout_alignLeft="@+id/ratingOlfatoCalidad"
+                android:layout_alignStart="@+id/ratingOlfatoCalidad"
                 android:layout_alignTop="@+id/iconoolfatointensidad"
                 android:layout_gravity="center"
                 android:numStars="7" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/mensajeOlfatoIntensidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView8"
-                android:layout_alignLeft="@+id/textView2"
-                android:layout_alignStart="@+id/textView2"
+                android:layout_alignLeft="@+id/mensajeVista"
+                android:layout_alignStart="@+id/mensajeVista"
                 android:layout_marginBottom="7dp"
                 android:hint="" />
 
@@ -114,8 +114,8 @@
                 android:layout_below="@+id/textView8"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
-                android:layout_toLeftOf="@+id/textView2"
-                android:layout_toStartOf="@+id/textView2"
+                android:layout_toLeftOf="@+id/mensajeVista"
+                android:layout_toStartOf="@+id/mensajeVista"
                 android:background="@drawable/iconoolfatocalidadxxxhdpi">
 
             </ImageView>
@@ -132,12 +132,12 @@
                 android:textSize="12sp"/>
 
             <RatingBar
-                android:id="@+id/ratingBar3"
+                android:id="@+id/ratingOlfatoCalidad"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar4"
-                android:layout_alignStart="@+id/ratingBar4"
+                android:layout_alignLeft="@+id/ratingBocaIntensidad"
+                android:layout_alignStart="@+id/ratingBocaIntensidad"
                 android:layout_below="@+id/textView8"
                 android:layout_gravity="center"
                 android:numStars="7" />
@@ -145,16 +145,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ratingBar3"
-                android:layout_alignLeft="@+id/textView3"
-                android:layout_alignStart="@+id/textView3"
+                android:layout_alignBottom="@+id/ratingOlfatoCalidad"
+                android:layout_alignLeft="@+id/mensajeOlfatoIntensidad"
+                android:layout_alignStart="@+id/mensajeOlfatoIntensidad"
                 android:hint=""
-                android:id="@+id/textView4" />
+                android:id="@+id/mensajeOlfatoCalidad" />
 
             <ImageView
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-
                 android:layout_marginTop="340dp"
                 android:background="@drawable/iconobocaintensidadxxxhdpi"
                 android:id="@+id/iconobocaintensidad"
@@ -177,24 +176,24 @@
                 android:layout_alignLeft="@+id/iconobocaintensidad"/>
 
             <RatingBar
-                android:id="@+id/ratingBar4"
+                android:id="@+id/ratingBocaIntensidad"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar5"
-                android:layout_alignStart="@+id/ratingBar5"
+                android:layout_alignLeft="@+id/ratingBocaCalidad"
+                android:layout_alignStart="@+id/ratingBocaCalidad"
                 android:layout_below="@+id/textView9"
                 android:layout_gravity="center"
                 android:numStars="7" />
 
             <TextView
+                android:id="@+id/mensajeBocaIntensidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ratingBar4"
-                android:layout_alignLeft="@+id/textView4"
-                android:layout_alignStart="@+id/textView4"
-                android:hint=""
-                android:id="@+id/textView5" />
+                android:layout_alignBottom="@+id/ratingBocaIntensidad"
+                android:layout_alignLeft="@+id/mensajeOlfatoCalidad"
+                android:layout_alignStart="@+id/mensajeOlfatoCalidad"
+                android:hint="" />
 
             <ImageView
                 android:id="@+id/iconobocacalidad"
@@ -219,7 +218,7 @@
                 android:textSize="12sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar5"
+                android:id="@+id/ratingBocaCalidad"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -234,11 +233,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ratingBar5"
-                android:layout_alignLeft="@+id/textView5"
-                android:layout_alignStart="@+id/textView5"
+                android:layout_alignBottom="@+id/ratingBocaCalidad"
+                android:layout_alignLeft="@+id/mensajeBocaIntensidad"
+                android:layout_alignStart="@+id/mensajeBocaIntensidad"
                 android:hint=""
-                android:id="@+id/textView6" />
+                android:id="@+id/mensajeBocaCalidad" />
 
             <ImageView
                 android:id="@+id/iconobocapersistencia"
@@ -263,12 +262,12 @@
                 android:textSize="12sp"/>
 
             <RatingBar
-                android:id="@+id/ratingBar6"
+                android:id="@+id/ratingBocaPersistencia"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar5"
-                android:layout_alignStart="@+id/ratingBar5"
+                android:layout_alignLeft="@+id/ratingBocaCalidad"
+                android:layout_alignStart="@+id/ratingBocaCalidad"
                 android:layout_alignTop="@+id/iconobocapersistencia"
                 android:layout_gravity="center"
                 android:numStars="7" />
@@ -276,11 +275,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ratingBar6"
-                android:layout_alignLeft="@+id/textView6"
-                android:layout_alignStart="@+id/textView6"
+                android:layout_alignBottom="@+id/ratingBocaPersistencia"
+                android:layout_alignLeft="@+id/mensajeBocaCalidad"
+                android:layout_alignStart="@+id/mensajeBocaCalidad"
                 android:hint=""
-                android:id="@+id/textView7" />
+                android:id="@+id/mensajeBocaPersistencia" />
 
             <ImageView
                 android:id="@+id/iconocalidad"
@@ -305,22 +304,23 @@
                 android:id="@+id/textView15" />
 
             <RatingBar
-                android:id="@+id/ratingBar7"
+                android:id="@+id/ratingArmonia"
                 style="@style/MyRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ratingBar6"
-                android:layout_alignStart="@+id/ratingBar6"
+                android:layout_alignLeft="@+id/ratingBocaPersistencia"
+                android:layout_alignStart="@+id/ratingBocaPersistencia"
                 android:layout_alignTop="@+id/iconocalidad"
                 android:layout_gravity="center"
                 android:numStars="7" />
 
             <TextView
+                android:id="@+id/mensajeArmonia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ratingBar7"
-                android:layout_alignLeft="@+id/textView7"
-                android:layout_alignStart="@+id/textView7"
+                android:layout_alignBottom="@+id/ratingArmonia"
+                android:layout_alignLeft="@+id/mensajeBocaPersistencia"
+                android:layout_alignStart="@+id/mensajeBocaPersistencia"
                 android:hint="" />
 
 
