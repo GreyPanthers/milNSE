@@ -120,6 +120,15 @@ public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser)
         }
         });
 
+        //Botón Leyenda
+        Button b = (Button) findViewById(R.id.bLeyendaId);
+        b.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                        startActivity(new Intent (valoracionVinoUno.this,PopLeyenda.class));
+                }
+        });
+
         }
 @Override
 protected void onStart(){
