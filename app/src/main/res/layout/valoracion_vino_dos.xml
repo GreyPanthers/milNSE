@@ -22,194 +22,306 @@
                     android:id="@+id/iconovista"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/iconovistaxxxhdpi">
-                </ImageView>
+                    android:layout_alignLeft="@+id/iconoolfatointensidad"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/iconoolfatointensidad"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/iconovistaxxxhdpi"></ImageView>
 
-                
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/iconovista"
-                    android:layout_alignRight="@+id/iconovista"
+                    android:layout_alignLeft="@+id/textView8"
+                    android:layout_alignStart="@+id/textView8"
                     android:layout_below="@+id/iconovista"
-                    android:layout_marginEnd="21dp"
-                    android:layout_marginRight="21dp"
-                    android:text="vista" />
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:text="vista"
+                    android:textSize="12sp"
+                    android:id="@+id/textView14" />
 
-                <RatingBar style="@style/MyRatingBar"
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar1"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
+                    android:layout_alignLeft="@+id/ratingBar2"
+                    android:layout_alignStart="@+id/ratingBar2"
+                    android:layout_alignTop="@+id/iconovista"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"/>
+                    android:numStars="7" />
 
                 <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="regumal" />
+                    android:layout_alignLeft="@+id/ratingBar1"
+                    android:layout_alignStart="@+id/ratingBar1"
+                    android:layout_below="@+id/ratingBar1"
+                    android:layout_marginLeft="71dp"
+                    android:layout_marginStart="71dp"
+                    android:hint="" />
 
                 <ImageView
+                    android:id="@+id/iconoolfatointensidad"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="120dp"
+                    android:layout_alignLeft="@+id/iconoolfatocalidad"
+                    android:layout_alignStart="@+id/iconoolfatocalidad"
+                    android:layout_below="@+id/textView14"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/iconoolfatointensidadxxxhdpi">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconoolfatointensidad"
+                    android:layout_alignRight="@+id/iconoolfatointensidad"
+                    android:layout_below="@+id/iconoolfatointensidad"
+                    android:text="olfato intensidad"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <RatingBar
                     android:id="@+id/ratingBar2"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="110dp"
-                    android:layout_gravity="center" />
-
-                <TextView
+                    style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignLeft="@+id/ratingBar3"
+                    android:layout_alignStart="@+id/ratingBar3"
+                    android:layout_alignTop="@+id/iconoolfatointensidad"
+                    android:layout_gravity="center"
+                    android:numStars="7" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView8"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2"
+                    android:layout_marginBottom="7dp"
+                    android:hint="" />
 
                 <ImageView
+                    android:id="@+id/iconoolfatocalidad"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="230dp"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/textView2"
+                    android:layout_toStartOf="@+id/textView2"
                     android:background="@drawable/iconoolfatocalidadxxxhdpi">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconoolfatocalidad"
+                    android:layout_alignRight="@+id/iconoolfatocalidad"
+                    android:layout_below="@+id/iconoolfatocalidad"
+                    android:text="olfato calidad"
+                    android:textAlignment="center"
+                    android:id="@+id/textView9"
+                    android:textSize="12sp"/>
+
+                <RatingBar
                     android:id="@+id/ratingBar3"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="220dp"
-                    android:layout_gravity="center" />
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ratingBar4"
+                    android:layout_alignStart="@+id/ratingBar4"
+                    android:layout_below="@+id/textView8"
+                    android:layout_gravity="center"
+                    android:numStars="7" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="250dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignBottom="@+id/ratingBar3"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_alignStart="@+id/textView3"
+                    android:hint=""
+                    android:id="@+id/textView4" />
 
                 <ImageView
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
+
                     android:layout_marginTop="340dp"
-                    android:background="@drawable/iconobocaintensidadxxxhdpi">
+                    android:background="@drawable/iconobocaintensidadxxxhdpi"
+                    android:id="@+id/iconobocaintensidad"
+                    android:layout_alignStart="@+id/iconoolfatocalidad"
+                    android:layout_alignLeft="@+id/iconoolfatocalidad">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="70sp"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconobocaintensidad"
+                    android:layout_alignRight="@+id/iconobocaintensidad"
+                    android:layout_below="@+id/iconobocaintensidad"
+                    android:text="boca intensidad"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:id="@+id/textView10"
+                    android:layout_alignStart="@+id/iconobocaintensidad"
+                    android:layout_alignLeft="@+id/iconobocaintensidad"/>
+
+                <RatingBar
                     android:id="@+id/ratingBar4"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="330dp"
-                    android:layout_gravity="center" />
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ratingBar5"
+                    android:layout_alignStart="@+id/ratingBar5"
+                    android:layout_below="@+id/textView9"
+                    android:layout_gravity="center"
+                    android:numStars="7" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="360dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignBottom="@+id/ratingBar4"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_alignStart="@+id/textView4"
+                    android:hint=""
+                    android:id="@+id/textView5" />
 
                 <ImageView
+                    android:id="@+id/iconobocacalidad"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="440dp"
-                    android:background="@drawable/iconoolfatocalidadxxxhdpi">
+                    android:layout_alignLeft="@+id/iconobocapersistencia"
+                    android:layout_alignStart="@+id/iconobocapersistencia"
+                    android:layout_below="@+id/textView10"
+                    android:background="@drawable/iconobocacalidadxxxhdpi">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconobocacalidad"
+                    android:layout_alignRight="@+id/iconobocacalidad"
+                    android:layout_below="@+id/iconobocacalidad"
+                    android:text="boca calidad"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar5"
+                    style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar5"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="440dp"
-                    android:layout_gravity="center" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView10"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:numStars="7" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="470dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignBottom="@+id/ratingBar5"
+                    android:layout_alignLeft="@+id/textView5"
+                    android:layout_alignStart="@+id/textView5"
+                    android:hint=""
+                    android:id="@+id/textView6" />
 
                 <ImageView
+                    android:id="@+id/iconobocapersistencia"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="540dp"
+                    android:layout_alignLeft="@+id/iconocalidad"
+                    android:layout_alignStart="@+id/iconocalidad"
+                    android:layout_below="@+id/textView11"
                     android:background="@drawable/iconobocapersistenciaxxxhdpi">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
+                <TextView
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconobocapersistencia"
+                    android:layout_alignRight="@+id/iconobocapersistencia"
+                    android:layout_below="@+id/iconobocapersistencia"
+                    android:text="boca persistencia"
+                    android:textAlignment="center"
+                    android:id="@+id/textView12"
+                    android:textSize="12sp"/>
+
+                <RatingBar
+                    android:id="@+id/ratingBar6"
+                    style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar6"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="550dp"
-                    android:layout_gravity="center" />
+                    android:layout_alignLeft="@+id/ratingBar5"
+                    android:layout_alignStart="@+id/ratingBar5"
+                    android:layout_alignTop="@+id/iconobocapersistencia"
+                    android:layout_gravity="center"
+                    android:numStars="7" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="580dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignBottom="@+id/ratingBar6"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignStart="@+id/textView6"
+                    android:hint=""
+                    android:id="@+id/textView7" />
 
                 <ImageView
+                    android:id="@+id/iconocalidad"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="640dp"
+                    android:layout_alignEnd="@+id/textView9"
+                    android:layout_alignRight="@+id/textView9"
+                    android:layout_below="@+id/textView12"
                     android:background="@drawable/iconoarmoniaapreciacionglobalxxxhdpi">
 
                 </ImageView>
 
-                <RatingBar style="@style/MyRatingBar"
+                <TextView
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iconocalidad"
+                    android:layout_alignRight="@+id/iconocalidad"
+                    android:layout_below="@+id/iconocalidad"
+                    android:text="armonia/ percepcion global"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:id="@+id/textView15" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar7"
+                    style="@style/MyRatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ratingBar7"
-                    android:numStars="7"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="660dp"
-                    android:layout_gravity="center" />
+                    android:layout_alignLeft="@+id/ratingBar6"
+                    android:layout_alignStart="@+id/ratingBar6"
+                    android:layout_alignTop="@+id/iconocalidad"
+                    android:layout_gravity="center"
+                    android:numStars="7" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="690dp"
-                    android:layout_marginLeft="100dp"
-                    android:hint="observaciones" />
+                    android:layout_alignBottom="@+id/ratingBar7"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignStart="@+id/textView7"
+                    android:hint="" />
 
 
             </RelativeLayout>
