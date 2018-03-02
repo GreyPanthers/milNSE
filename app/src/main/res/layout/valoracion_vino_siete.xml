@@ -55,7 +55,8 @@
             android:layout_alignStart="@+id/ratingOlfatoIntensidad"
             android:layout_alignTop="@+id/iconovista"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1" />
 
         <TextView
             android:id="@+id/mensajeVista"
@@ -100,7 +101,8 @@
             android:layout_alignStart="@+id/ratingOlfatoCalidad"
             android:layout_alignTop="@+id/iconoolfatointensidad"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1" />
 
         <TextView
             android:id="@+id/mensajeOlfatoIntensidad"
@@ -145,7 +147,8 @@
             android:layout_alignStart="@+id/ratingBocaIntensidad"
             android:layout_below="@+id/textView8"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1"/>
 
         <TextView
             android:id="@+id/mensajeOlfatoCalidad"
@@ -189,7 +192,8 @@
             android:layout_alignStart="@+id/ratingBocaCalidad"
             android:layout_below="@+id/textView9"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1" />
 
         <TextView
             android:id="@+id/mensajeBocaIntensidad"
@@ -233,7 +237,8 @@
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1"/>
 
         <TextView
             android:id="@+id/mensajeBocaCalidad"
@@ -275,7 +280,8 @@
             android:layout_alignStart="@+id/ratingBocaCalidad"
             android:layout_alignTop="@+id/iconobocapersistencia"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1" />
 
         <TextView
             android:id="@+id/mensajeBocaPersistencia"
@@ -317,7 +323,8 @@
             android:layout_alignStart="@+id/ratingBocaPersistencia"
             android:layout_alignTop="@+id/iconocalidad"
             android:layout_gravity="center"
-            android:numStars="7" />
+            android:numStars="7"
+            android:stepSize="1"/>
 
         <TextView
             android:id="@+id/mensajeArmonia"
