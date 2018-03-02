@@ -10,332 +10,358 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="11"
         android:layout_gravity="center">
 
 
 
-    <RelativeLayout
-        android:layout_width="337dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginRight="23dp"
+        <RelativeLayout
+            android:layout_width="337dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="23dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iconovista"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/iconoolfatointensidad"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/iconoolfatointensidad"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/iconovistaxxxhdpi"></ImageView>
+
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_below="@+id/iconovista"
+                android:layout_marginLeft="21dp"
+                android:layout_marginStart="21dp"
+                android:text="vista"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingVista"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingOlfatoIntensidad"
+                android:layout_alignStart="@+id/ratingOlfatoIntensidad"
+                android:layout_alignTop="@+id/iconovista"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingVista"
+                android:layout_alignStart="@+id/ratingVista"
+                android:layout_below="@+id/ratingVista"
+                android:layout_marginLeft="71dp"
+                android:layout_marginStart="71dp"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconoolfatointensidad"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/iconoolfatocalidad"
+                android:layout_alignStart="@+id/iconoolfatocalidad"
+                android:layout_below="@+id/textView14"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/iconoolfatointensidadxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconoolfatointensidad"
+                android:layout_alignRight="@+id/iconoolfatointensidad"
+                android:layout_below="@+id/iconoolfatointensidad"
+                android:text="olfato intensidad"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingOlfatoIntensidad"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingOlfatoCalidad"
+                android:layout_alignStart="@+id/ratingOlfatoCalidad"
+                android:layout_alignTop="@+id/iconoolfatointensidad"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeOlfatoIntensidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView8"
+                android:layout_alignLeft="@+id/mensajeVista"
+                android:layout_alignStart="@+id/mensajeVista"
+                android:layout_marginBottom="7dp"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconoolfatocalidad"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/textView8"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/mensajeVista"
+                android:layout_toStartOf="@+id/mensajeVista"
+                android:background="@drawable/iconoolfatocalidadxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconoolfatocalidad"
+                android:layout_alignRight="@+id/iconoolfatocalidad"
+                android:layout_below="@+id/iconoolfatocalidad"
+                android:text="olfato calidad"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingOlfatoCalidad"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingBocaIntensidad"
+                android:layout_alignStart="@+id/ratingBocaIntensidad"
+                android:layout_below="@+id/textView8"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeOlfatoCalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratingOlfatoCalidad"
+                android:layout_alignLeft="@+id/mensajeOlfatoIntensidad"
+                android:layout_alignStart="@+id/mensajeOlfatoIntensidad"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconobocaintensidad"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/iconoolfatocalidad"
+                android:layout_alignStart="@+id/iconoolfatocalidad"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/iconobocaintensidadxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconobocaintensidad"
+                android:layout_alignLeft="@+id/iconobocaintensidad"
+                android:layout_alignRight="@+id/iconobocaintensidad"
+                android:layout_alignStart="@+id/iconobocaintensidad"
+                android:layout_below="@+id/iconobocaintensidad"
+                android:text="boca intensidad"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBocaIntensidad"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingBocaCalidad"
+                android:layout_alignStart="@+id/ratingBocaCalidad"
+                android:layout_below="@+id/textView9"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeBocaIntensidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratingBocaIntensidad"
+                android:layout_alignLeft="@+id/mensajeOlfatoCalidad"
+                android:layout_alignStart="@+id/mensajeOlfatoCalidad"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconobocacalidad"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/iconobocapersistencia"
+                android:layout_alignStart="@+id/iconobocapersistencia"
+                android:layout_below="@+id/textView10"
+                android:background="@drawable/iconobocacalidadxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconobocacalidad"
+                android:layout_alignRight="@+id/iconobocacalidad"
+                android:layout_below="@+id/iconobocacalidad"
+                android:text="boca calidad"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBocaCalidad"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView10"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeBocaCalidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratingBocaCalidad"
+                android:layout_alignLeft="@+id/mensajeBocaIntensidad"
+                android:layout_alignStart="@+id/mensajeBocaIntensidad"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconobocapersistencia"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignLeft="@+id/iconocalidad"
+                android:layout_alignStart="@+id/iconocalidad"
+                android:layout_below="@+id/textView11"
+                android:background="@drawable/iconobocapersistenciaxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconobocapersistencia"
+                android:layout_alignRight="@+id/iconobocapersistencia"
+                android:layout_below="@+id/iconobocapersistencia"
+                android:text="boca persistencia"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBocaPersistencia"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingBocaCalidad"
+                android:layout_alignStart="@+id/ratingBocaCalidad"
+                android:layout_alignTop="@+id/iconobocapersistencia"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeBocaPersistencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratingBocaPersistencia"
+                android:layout_alignLeft="@+id/mensajeBocaCalidad"
+                android:layout_alignStart="@+id/mensajeBocaCalidad"
+                android:hint="" />
+
+            <ImageView
+                android:id="@+id/iconocalidad"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignEnd="@+id/textView9"
+                android:layout_alignRight="@+id/textView9"
+                android:layout_below="@+id/textView12"
+                android:background="@drawable/iconoarmoniaapreciacionglobalxxxhdpi">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iconocalidad"
+                android:layout_alignRight="@+id/iconocalidad"
+                android:layout_below="@+id/iconocalidad"
+                android:text="armonia/ percepcion global"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingArmonia"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingBocaPersistencia"
+                android:layout_alignStart="@+id/ratingBocaPersistencia"
+                android:layout_alignTop="@+id/iconocalidad"
+                android:layout_gravity="center"
+                android:numStars="7"
+                android:stepSize="1"/>
+
+            <TextView
+                android:id="@+id/mensajeArmonia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratingArmonia"
+                android:layout_alignLeft="@+id/mensajeBocaPersistencia"
+                android:layout_alignStart="@+id/mensajeBocaPersistencia"
+                android:hint="" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
 
-        <ImageView
-            android:id="@+id/iconovista"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignLeft="@+id/iconoolfatointensidad"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/iconoolfatointensidad"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/iconovistaxxxhdpi"></ImageView>
+        <Button
+            android:id="@+id/bLeyendaId"
+            android:layout_marginLeft="75dp"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/botonleyendaxxhdpi"
+            android:onClick="bLeyenda"
+            />
+        <Button
+            android:layout_marginRight="75dp"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/botonconfirmarxxhdpi"
+            android:onClick="enviar"/>
 
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView8"
-            android:layout_alignStart="@+id/textView8"
-            android:layout_below="@+id/iconovista"
-            android:layout_marginLeft="21dp"
-            android:layout_marginStart="21dp"
-            android:text="vista"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingVista"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingOlfatoIntensidad"
-            android:layout_alignStart="@+id/ratingOlfatoIntensidad"
-            android:layout_alignTop="@+id/iconovista"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1"/>
-
-        <TextView
-            android:id="@+id/mensajeVista"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingVista"
-            android:layout_alignStart="@+id/ratingVista"
-            android:layout_below="@+id/ratingVista"
-            android:layout_marginLeft="71dp"
-            android:layout_marginStart="71dp"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconoolfatointensidad"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignLeft="@+id/iconoolfatocalidad"
-            android:layout_alignStart="@+id/iconoolfatocalidad"
-            android:layout_below="@+id/textView14"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/iconoolfatointensidadxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconoolfatointensidad"
-            android:layout_alignRight="@+id/iconoolfatointensidad"
-            android:layout_below="@+id/iconoolfatointensidad"
-            android:text="olfato intensidad"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingOlfatoIntensidad"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingOlfatoCalidad"
-            android:layout_alignStart="@+id/ratingOlfatoCalidad"
-            android:layout_alignTop="@+id/iconoolfatointensidad"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1"/>
-
-        <TextView
-            android:id="@+id/mensajeOlfatoIntensidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/textView8"
-            android:layout_alignLeft="@+id/mensajeVista"
-            android:layout_alignStart="@+id/mensajeVista"
-            android:layout_marginBottom="7dp"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconoolfatocalidad"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_below="@+id/textView8"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_toLeftOf="@+id/mensajeVista"
-            android:layout_toStartOf="@+id/mensajeVista"
-            android:background="@drawable/iconoolfatocalidadxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconoolfatocalidad"
-            android:layout_alignRight="@+id/iconoolfatocalidad"
-            android:layout_below="@+id/iconoolfatocalidad"
-            android:text="olfato calidad"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingOlfatoCalidad"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingBocaIntensidad"
-            android:layout_alignStart="@+id/ratingBocaIntensidad"
-            android:layout_below="@+id/textView8"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1"/>
-
-        <TextView
-            android:id="@+id/mensajeOlfatoCalidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ratingOlfatoCalidad"
-            android:layout_alignLeft="@+id/mensajeOlfatoIntensidad"
-            android:layout_alignStart="@+id/mensajeOlfatoIntensidad"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconobocaintensidad"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignLeft="@+id/iconoolfatocalidad"
-            android:layout_alignStart="@+id/iconoolfatocalidad"
-            android:layout_marginTop="340dp"
-            android:background="@drawable/iconobocaintensidadxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconobocaintensidad"
-            android:layout_alignLeft="@+id/iconobocaintensidad"
-            android:layout_alignRight="@+id/iconobocaintensidad"
-            android:layout_alignStart="@+id/iconobocaintensidad"
-            android:layout_below="@+id/iconobocaintensidad"
-            android:text="boca intensidad"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingBocaIntensidad"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingBocaCalidad"
-            android:layout_alignStart="@+id/ratingBocaCalidad"
-            android:layout_below="@+id/textView9"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1" />
-
-        <TextView
-            android:id="@+id/mensajeBocaIntensidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ratingBocaIntensidad"
-            android:layout_alignLeft="@+id/mensajeOlfatoCalidad"
-            android:layout_alignStart="@+id/mensajeOlfatoCalidad"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconobocacalidad"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignLeft="@+id/iconobocapersistencia"
-            android:layout_alignStart="@+id/iconobocapersistencia"
-            android:layout_below="@+id/textView10"
-            android:background="@drawable/iconobocacalidadxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconobocacalidad"
-            android:layout_alignRight="@+id/iconobocacalidad"
-            android:layout_below="@+id/iconobocacalidad"
-            android:text="boca calidad"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingBocaCalidad"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView10"
-            android:layout_gravity="center"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:numStars="7"
-            android:stepSize="1" />
-
-        <TextView
-            android:id="@+id/mensajeBocaCalidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ratingBocaCalidad"
-            android:layout_alignLeft="@+id/mensajeBocaIntensidad"
-            android:layout_alignStart="@+id/mensajeBocaIntensidad"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconobocapersistencia"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignLeft="@+id/iconocalidad"
-            android:layout_alignStart="@+id/iconocalidad"
-            android:layout_below="@+id/textView11"
-            android:background="@drawable/iconobocapersistenciaxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconobocapersistencia"
-            android:layout_alignRight="@+id/iconobocapersistencia"
-            android:layout_below="@+id/iconobocapersistencia"
-            android:text="boca persistencia"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingBocaPersistencia"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingBocaCalidad"
-            android:layout_alignStart="@+id/ratingBocaCalidad"
-            android:layout_alignTop="@+id/iconobocapersistencia"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1"/>
-
-        <TextView
-            android:id="@+id/mensajeBocaPersistencia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ratingBocaPersistencia"
-            android:layout_alignLeft="@+id/mensajeBocaCalidad"
-            android:layout_alignStart="@+id/mensajeBocaCalidad"
-            android:hint="" />
-
-        <ImageView
-            android:id="@+id/iconocalidad"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignEnd="@+id/textView9"
-            android:layout_alignRight="@+id/textView9"
-            android:layout_below="@+id/textView12"
-            android:background="@drawable/iconoarmoniaapreciacionglobalxxxhdpi">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iconocalidad"
-            android:layout_alignRight="@+id/iconocalidad"
-            android:layout_below="@+id/iconocalidad"
-            android:text="armonia/ percepcion global"
-            android:textAlignment="center"
-            android:textSize="12sp" />
-
-        <RatingBar
-            android:id="@+id/ratingArmonia"
-            style="@style/MyRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ratingBocaPersistencia"
-            android:layout_alignStart="@+id/ratingBocaPersistencia"
-            android:layout_alignTop="@+id/iconocalidad"
-            android:layout_gravity="center"
-            android:numStars="7"
-            android:stepSize="1"/>
-
-        <TextView
-            android:id="@+id/mensajeArmonia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ratingArmonia"
-            android:layout_alignLeft="@+id/mensajeBocaPersistencia"
-            android:layout_alignStart="@+id/mensajeBocaPersistencia"
-            android:hint="" />
-
-
-    </RelativeLayout>
-    </ScrollView>
+    </LinearLayout>
 </LinearLayout>
