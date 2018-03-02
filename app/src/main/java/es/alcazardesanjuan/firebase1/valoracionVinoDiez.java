@@ -1,8 +1,10 @@
 package es.alcazardesanjuan.firebase1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,6 +57,15 @@ public class valoracionVinoDiez extends AppCompatActivity {
         ratingBocaCalidad = (RatingBar) findViewById(R.id.ratingBocaCalidad);
         mensajeArmonia = (TextView) findViewById(R.id.mensajeArmonia);
         ratingArmonia = (RatingBar) findViewById(R.id.ratingArmonia);
+
+        //Botón Leyenda
+        Button b = (Button) findViewById(R.id.bLeyendaId);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(valoracionVinoDiez.this,PopLeyenda.class));
+            }
+        });
 
 
         ratingVista.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
