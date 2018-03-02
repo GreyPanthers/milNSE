@@ -59,6 +59,12 @@
             style="@style/Text_aboutus_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/miriam" />
+
+        <TextView
+            style="@style/Text_aboutus_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/jesus"/>
 
         <TextView
@@ -66,12 +72,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/manu"/>
-
-        <TextView
-            style="@style/Text_aboutus_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/miriam"/>
 
         <TextView
             style="@style/Text_aboutus_content"
