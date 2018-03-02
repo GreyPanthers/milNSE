@@ -183,4 +183,8 @@ public class wineSelection extends AppCompatActivity {
                 break;
         }*/
     }
+    public void aboutus(View v){
+        Intent activity= new Intent(getApplicationContext(), aboutUs.class);
+        startActivity(activity);
+    }
 }
