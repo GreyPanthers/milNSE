@@ -345,19 +345,22 @@
     android:layout_weight="1"
     android:orientation="horizontal">
 
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="75dp"
-        android:layout_weight="1"
-        android:background="@drawable/botonconfirmarxxhdpi" />
 
     <Button
-        android:layout_marginRight="75dp"
+        android:layout_marginLeft="75dp"
         android:layout_width="30dp"
         android:layout_height="50dp"
         android:layout_weight="1"
         android:background="@drawable/botonleyendaxxhdpi"/>
+    <Button
+        android:layout_marginRight="75dp"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+
+        android:layout_weight="1"
+        android:background="@drawable/botonconfirmarxxhdpi" />
+
+
 
 </LinearLayout>
 </LinearLayout>
