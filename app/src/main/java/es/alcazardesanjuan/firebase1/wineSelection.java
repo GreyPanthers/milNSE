@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class wineSelection extends AppCompatActivity {
 
     TextView usuario;
-    private FirebaseAuth firebaseAuth;  
+    private FirebaseAuth firebaseAuth;
     public ImageButton bInfor;
     public ImageButton bInfor2;
     public ImageButton bInfor3;
