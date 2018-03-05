@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class wineSelection extends AppCompatActivity {
 
-    TextView usuario;    
+    TextView usuario;
     private FirebaseAuth firebaseAuth;
     public ImageButton bInfor;
     public ImageButton bInfor2;
@@ -179,7 +179,7 @@ public class wineSelection extends AppCompatActivity {
         switch(view.getId())
         {
             case R.id.Corcho10:
-                im.setImageResource(R.drawable.corchochecked10xhdpi);
+                im.setImageResource(R.drawable.corchochecked9xhdpi);
                 break;
         }
     }
