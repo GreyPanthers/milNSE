@@ -23,6 +23,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ private double dato, mensaje, valor1,valor2,valor3,valor4,valor5,valor6,valor7;
 private double value1,value2,value3,value4,value5,value6,value7;
 private String observacion;
 private String testea = "puede";
-
+public int siDeje=0;
 
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
@@ -68,6 +70,8 @@ protected void onCreate(Bundle savedInstanceState) {
         ratingBocaCalidad = (RatingBar) findViewById(R.id.ratingBocaCalidad);
         mensajeArmonia = (TextView) findViewById(R.id.mensajeArmonia);
         ratingArmonia = (RatingBar) findViewById(R.id.ratingArmonia);
+
+
 
 
         ratingVista.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -204,7 +208,7 @@ public void onCancelled(DatabaseError databaseError) {
 
 public void modificarVista (){
         mensaje = ratingVista.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor1= dato+value1;
         observacion = "Eliminado";
@@ -249,7 +253,7 @@ public void modificarVista (){
         }
 public void modificarOlfatoIntensidad (){
         mensaje = ratingOlfatoIntensidad.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor2= dato+value2;
         observacion = "Eliminado";
@@ -294,7 +298,7 @@ public void modificarOlfatoIntensidad (){
         }
 public void modificarOlfatoCalidad (){
         mensaje = ratingOlfatoCalidad.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor3= dato+value3;
         observacion = "Eliminado";
@@ -339,7 +343,7 @@ public void modificarOlfatoCalidad (){
         }
 public void modificarBocaIntensidad(){
         mensaje = ratingBocaIntensidad.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor4= dato+value4;
         observacion = "Eliminado";
@@ -384,7 +388,7 @@ public void modificarBocaIntensidad(){
         }
 public void modificarBocaPersistencia(){
         mensaje = ratingBocaPersistencia.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor5= dato+value5;
         observacion = "Eliminado";
@@ -474,7 +478,7 @@ public void modificarBocaCalidad(){
         }
 public void modificarArmonia(){
         mensaje = ratingArmonia.getRating();
-        if (mensaje == 1){
+        if (mensaje == 1 || mensaje==0){
         dato = 0;
         valor7= dato+value7;
         observacion = "Eliminado";
@@ -517,6 +521,9 @@ public void modificarArmonia(){
         mensajeArmonia.setText(observacion);
         }
         }
+
+
+
 public void enviar (View view){
         if (testea =="puede") {
         insertVista.setValue(valor1);
@@ -528,6 +535,10 @@ public void enviar (View view){
         insertArmonia.setValue(valor7);
         double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
         total.setValue(total1);
+
+            Intent activity = new Intent(getApplicationContext(), wineSelection.class);
+            activity.putExtra("siDeje",1 );
+            startActivity(activity);
 
         testea="ya no";
         Toast.makeText(this, "Encuesta realizada correctamente", Toast.LENGTH_LONG).show();
