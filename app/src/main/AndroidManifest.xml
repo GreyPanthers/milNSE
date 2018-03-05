@@ -59,7 +59,6 @@
         <activity
             android:name=".PopLeyenda"
             android:theme="@style/AppTheme.CustomTheme"></activity>
-        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
