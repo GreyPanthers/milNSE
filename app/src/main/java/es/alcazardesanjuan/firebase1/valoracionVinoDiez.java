@@ -517,6 +517,8 @@ public class valoracionVinoDiez extends AppCompatActivity {
             insertArmonia.setValue(valor7);
             double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
             total.setValue(total1);
+            Intent activity = new Intent(getApplicationContext(), wineSelection.class);
+            startActivity(activity);
 
             testea="ya no";
             Toast.makeText(this, "Encuesta realizada correctamente", Toast.LENGTH_LONG).show();
