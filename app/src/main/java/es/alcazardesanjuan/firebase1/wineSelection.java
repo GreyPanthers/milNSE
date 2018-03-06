@@ -12,6 +12,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static es.alcazardesanjuan.firebase1.R.id.Corcho1;
+
 public class wineSelection extends AppCompatActivity {
 
     TextView usuario;
@@ -26,23 +28,23 @@ public class wineSelection extends AppCompatActivity {
     private ImageButton bInfor8;
     private ImageButton bInfor9;
     private ImageButton bInfor10;
-    public  int siDeje=0;
-    public  int siDeje2=0;
-    public  int siDeje3=0;
-    public  int siDeje4=0;
-    public  int siDeje5=0;
-    public  int siDeje6=0;
-    public  int siDeje7=0;
-    public  int siDeje8=0;
-    public  int siDeje9=0;
-    public  int siDeje10=0;
+    public int siDeje;
+    public int siDeje2;
+    public int siDeje3;
+    public int siDeje4;
+    public int siDeje5;
+    public int siDeje6;
+    public int siDeje7;
+    public int siDeje8;
+    public int siDeje9;
+    public int siDeje10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wine_selection);
-        usuario = (TextView) findViewById( R.id.eti_nombreA );
-        bInfor = (ImageButton) findViewById(R.id.Corcho1);
+        usuario = (TextView) findViewById(R.id.eti_nombreA);
+        bInfor = (ImageButton) findViewById(Corcho1);
         bInfor2 = (ImageButton) findViewById(R.id.Corcho2);
         bInfor3 = (ImageButton) findViewById(R.id.Corcho3);
         bInfor4 = (ImageButton) findViewById(R.id.Corcho4);
@@ -53,70 +55,16 @@ public class wineSelection extends AppCompatActivity {
         bInfor9 = (ImageButton) findViewById(R.id.Corcho9);
         bInfor10 = (ImageButton) findViewById(R.id.Corcho10);
 
-        firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        Intent intent=getIntent();
-        Bundle extras =intent.getExtras();
-        Intent intent2=getIntent();
-        Bundle extras2 =intent2.getExtras();
-        if (extras != null) {
-           int deja = (Integer) extras.get("siDeje");
-            siDeje = deja;
-            bInfor.setImageResource(R.drawable.corchochecked1xhdpi);
-            int deja2 = (Integer) extras.get("siDeje2");
-            siDeje2 = deja2;
-            bInfor2.setImageResource(R.drawable.corchochecked2xhdpi);
-        }
-
-        else if(extras2 != null){
-            int deja3 = (Integer) extras.get("siDeje3");
-            siDeje3 = deja3;
-            bInfor3.setImageResource(R.drawable.corchochecked3xhdpi);
-        }
-        else if(extras != null){
-            int deja4 = (Integer) extras.get("siDeje4");
-            siDeje4 = deja4;
-            bInfor4.setImageResource(R.drawable.corchochecked4xhdpi);
-        }
-        else if(extras != null){
-            int deja5 = (Integer) extras.get("siDeje5");
-            siDeje5 = deja5;
-            bInfor5.setImageResource(R.drawable.corchochecked5xhdpi);
-        }
-        else if(extras != null){
-            int deja6 = (Integer) extras.get("siDeje6");
-            siDeje6 = deja6;
-            bInfor6.setImageResource(R.drawable.corchochecked6xhdpi);
-        }
-        else if(extras != null){
-            int deja7 = (Integer) extras.get("siDeje7");
-            siDeje7 = deja7;
-            bInfor7.setImageResource(R.drawable.corchochecked7xhdpi);
-        }
-        else if(extras != null){
-            int deja8 = (Integer) extras.get("siDeje8");
-            siDeje8 = deja8;
-            bInfor8.setImageResource(R.drawable.corchochecked8xhdpi);
-        }
-        else if(extras != null){
-            int deja9 = (Integer) extras.get("siDeje9");
-            siDeje9 = deja9;
-            bInfor9.setImageResource(R.drawable.corchochecked9xhdpi);
-        }
-        else if(extras != null){
-            int deja10 = (Integer) extras.get("siDeje10");
-            siDeje10 = deja10;
-            bInfor10.setImageResource(R.drawable.corchochecked10xhdpi);
-        }
-
-        if (user!=null) {
+        if (user != null) {
 
             usuario.setText(user.getEmail().toString());
-        }}
-
+        }
+    }
     //Cambiar los estados de los botones de los corchos
     public void bInfor (View view){
+
 
         if (siDeje==0) {
             Intent activity = new Intent(getApplicationContext(), valoracionVinoUno.class);
@@ -288,4 +236,6 @@ public class wineSelection extends AppCompatActivity {
         Intent activity= new Intent(getApplicationContext(), aboutUs.class);
         startActivity(activity);
     }
+
+
 }
