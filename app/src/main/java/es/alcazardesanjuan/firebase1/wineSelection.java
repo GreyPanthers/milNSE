@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,16 +16,26 @@ public class wineSelection extends AppCompatActivity {
 
     TextView usuario;
     private FirebaseAuth firebaseAuth;
-    public ImageButton bInfor;
-    public ImageButton bInfor2;
-    public ImageButton bInfor3;
-    public ImageButton bInfor4;
-    public ImageButton bInfor5;
-    public ImageButton bInfor6;
-    public ImageButton bInfor7;
-    public ImageButton bInfor8;
-    public ImageButton bInfor9;
-    public ImageButton bInfor10;
+    private ImageButton bInfor;
+    private ImageButton bInfor2;
+    private ImageButton bInfor3;
+    private ImageButton bInfor4;
+    private ImageButton bInfor5;
+    private ImageButton bInfor6;
+    private ImageButton bInfor7;
+    private ImageButton bInfor8;
+    private ImageButton bInfor9;
+    private ImageButton bInfor10;
+    public  int siDeje=0;
+    public  int siDeje2=0;
+    public  int siDeje3=0;
+    public  int siDeje4=0;
+    public  int siDeje5=0;
+    public  int siDeje6=0;
+    public  int siDeje7=0;
+    public  int siDeje8=0;
+    public  int siDeje9=0;
+    public  int siDeje10=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +56,60 @@ public class wineSelection extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        Intent intent=getIntent();
+        Bundle extras =intent.getExtras();
+        Intent intent2=getIntent();
+        Bundle extras2 =intent2.getExtras();
+        if (extras != null) {
+           int deja = (Integer) extras.get("siDeje");
+            siDeje = deja;
+            bInfor.setImageResource(R.drawable.corchochecked1xhdpi);
+            int deja2 = (Integer) extras.get("siDeje2");
+            siDeje2 = deja2;
+            bInfor2.setImageResource(R.drawable.corchochecked2xhdpi);
+        }
+
+        else if(extras2 != null){
+            int deja3 = (Integer) extras.get("siDeje3");
+            siDeje3 = deja3;
+            bInfor3.setImageResource(R.drawable.corchochecked3xhdpi);
+        }
+        else if(extras != null){
+            int deja4 = (Integer) extras.get("siDeje4");
+            siDeje4 = deja4;
+            bInfor4.setImageResource(R.drawable.corchochecked4xhdpi);
+        }
+        else if(extras != null){
+            int deja5 = (Integer) extras.get("siDeje5");
+            siDeje5 = deja5;
+            bInfor5.setImageResource(R.drawable.corchochecked5xhdpi);
+        }
+        else if(extras != null){
+            int deja6 = (Integer) extras.get("siDeje6");
+            siDeje6 = deja6;
+            bInfor6.setImageResource(R.drawable.corchochecked6xhdpi);
+        }
+        else if(extras != null){
+            int deja7 = (Integer) extras.get("siDeje7");
+            siDeje7 = deja7;
+            bInfor7.setImageResource(R.drawable.corchochecked7xhdpi);
+        }
+        else if(extras != null){
+            int deja8 = (Integer) extras.get("siDeje8");
+            siDeje8 = deja8;
+            bInfor8.setImageResource(R.drawable.corchochecked8xhdpi);
+        }
+        else if(extras != null){
+            int deja9 = (Integer) extras.get("siDeje9");
+            siDeje9 = deja9;
+            bInfor9.setImageResource(R.drawable.corchochecked9xhdpi);
+        }
+        else if(extras != null){
+            int deja10 = (Integer) extras.get("siDeje10");
+            siDeje10 = deja10;
+            bInfor10.setImageResource(R.drawable.corchochecked10xhdpi);
+        }
+
         if (user!=null) {
 
             usuario.setText(user.getEmail().toString());
@@ -52,135 +117,175 @@ public class wineSelection extends AppCompatActivity {
 
     //Cambiar los estados de los botones de los corchos
     public void bInfor (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoUno.class);
-        startActivity(activity);
 
-        //initialize image view object
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho1);
-        //get clicked button id from view object
-        switch(view.getId())
-        {
-            case R.id.Corcho1:
-                //if Corcho1 is clicked than set image1
-                im.setImageResource(R.drawable.corchochecked1xhdpi);
-                break;
+        if (siDeje==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoUno.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho1);
+            siDeje=1;
+            bInfor.setImageResource(R.drawable.corchochecked1xhdpi);
+            //initialize image view object
+
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
 
     public void bInfor2 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoDos.class);
-        startActivity(activity);
+        if (siDeje2==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoDos.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho2);
+            siDeje2=1;
+            bInfor2.setImageResource(R.drawable.corchochecked2xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho2);
-       switch(view.getId())
-        {
-            case R.id.Corcho2:
-                im.setImageResource(R.drawable.corchochecked2xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
 
     public void bInfor3 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoTres.class);
-        startActivity(activity);
+        if (siDeje3==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoTres.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho3);
+            siDeje3=1;
+            bInfor3.setImageResource(R.drawable.corchochecked3xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho3);
-        switch(view.getId())
-        {
-            case R.id.Corcho3:
-                im.setImageResource(R.drawable.corchochecked3xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor4 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoCuatro.class);
-        startActivity(activity);
+        if (siDeje4==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoCuatro.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho4);
+            siDeje4=1;
+            bInfor4.setImageResource(R.drawable.corchochecked4xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho4);
-        switch(view.getId())
-        {
-            case R.id.Corcho4:
-                im.setImageResource(R.drawable.corchochecked4xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor5 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoCinco.class);
-        startActivity(activity);
+        if (siDeje5==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoCinco.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho5);
+            siDeje5=1;
+            bInfor5.setImageResource(R.drawable.corchochecked5xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho5);
-        switch(view.getId())
-        {
-            case R.id.Corcho5:
-                im.setImageResource(R.drawable.corchochecked5xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor6 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoSeis.class);
-        startActivity(activity);
+        if (siDeje6==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoSeis.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho6);
+            siDeje6=1;
+            bInfor6.setImageResource(R.drawable.corchochecked6xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho6);
-       switch(view.getId())
-        {
-            case R.id.Corcho6:
-                im.setImageResource(R.drawable.corchochecked6xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor7 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoSiete.class);
-        startActivity(activity);
+        if (siDeje7==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoSiete.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho7);
+            siDeje7=1;
+            bInfor7.setImageResource(R.drawable.corchochecked7xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho7);
-        switch(view.getId())
-        {
-            case R.id.Corcho7:
-                im.setImageResource(R.drawable.corchochecked7xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor8 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoOcho.class);
-        startActivity(activity);
+        if (siDeje8==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoOcho.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho8);
+            siDeje8=1;
+            bInfor8.setImageResource(R.drawable.corchochecked8xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho8);
-       switch(view.getId())
-        {
-            case R.id.Corcho8:
-                im.setImageResource(R.drawable.corchochecked8xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
+
 
     public void bInfor9 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoNueve.class);
-        startActivity(activity);
+        if (siDeje9==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoNueve.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho9);
+            siDeje9=1;
+            bInfor9.setImageResource(R.drawable.corchochecked9xhdpi);
+            //initialize image view object
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho9);
-        switch(view.getId())
-        {
-            case R.id.Corcho9:
-                im.setImageResource(R.drawable.corchochecked9xhdpi);
-                break;
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
     }
 
-    public void bInfor10 (View view){
-        Intent activity=new Intent(getApplicationContext(),valoracionVinoDiez.class);
-        startActivity(activity);
 
-        ImageButton im=(ImageButton) findViewById(R.id.Corcho10);
-        switch(view.getId())
-        {
-            case R.id.Corcho10:
-                im.setImageResource(R.drawable.corchochecked9xhdpi);
-                break;
+    public void bInfor10 (View view){
+        if (siDeje10==0) {
+            Intent activity = new Intent(getApplicationContext(), valoracionVinoDiez.class);
+            startActivity(activity);
+            ImageButton im = (ImageButton) findViewById(R.id.Corcho10);
+            siDeje10=1;
+            bInfor10.setImageResource(R.drawable.corchochecked10xhdpi);
+            //initialize image view object
+
+        }else {
+
+            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
+
+    }
+
+    public void aboutus(View v){
+        Intent activity= new Intent(getApplicationContext(), aboutUs.class);
+        startActivity(activity);
     }
 }

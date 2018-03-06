@@ -134,76 +134,8 @@ public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser)
         });
 
         }
-@Override
-protected void onStart(){
-        super.onStart();
-
-        insertVista.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value1 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertOlfatoIntensidad.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value2 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertOlfatoCalidad.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value3 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertBocaIntensidad.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value4 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertBocaPersistencia.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value5 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertBocaCalidad.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value6 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
-        insertArmonia.addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        value7 = dataSnapshot.getValue(double.class);
-        }
-@Override
-public void onCancelled(DatabaseError databaseError) {
-        }
-        });
 
 
-        }
 
 
 public void modificarVista (){
@@ -524,17 +456,148 @@ public void modificarArmonia(){
 
 
 
-public void enviar (View view){
+public void enviar (final View view){
+
+        DatabaseReference upVista = insertVista;
+        DatabaseReference upOlfatoIntensidad = insertOlfatoIntensidad;
+        DatabaseReference upOlfatoCalidad = insertOlfatoCalidad;
+        DatabaseReference upBocaIntensidad = insertBocaIntensidad;
+        DatabaseReference upBocaPeristencia = insertBocaPersistencia;
+        DatabaseReference upBocaCalidad = insertBocaCalidad;
+        DatabaseReference upArmonia = insertArmonia;
+        DatabaseReference upTotal = total;
+
+
+                upVista.runTransaction(new Transaction.Handler() {
+                        @Override
+                        public Transaction.Result doTransaction(MutableData mutableData) {
+                                Double value1 = mutableData.getValue(double.class);
+                                if (value1 == null) {
+                                        mutableData.setValue(valor1);
+                                } else {
+                                        mutableData.setValue(value1 + valor1);
+                                }
+
+                                return Transaction.success(mutableData);
+                        }
+
+                        @Override
+                        public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                                System.out.println("Transaction completed");
+                        }
+                });
+        upOlfatoIntensidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value2 = mutableData.getValue(double.class);
+                        if (value2 == null) {
+                                mutableData.setValue(valor2);
+                        } else {
+                                mutableData.setValue(value2 + valor2);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upOlfatoCalidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value3 = mutableData.getValue(double.class);
+                        if (value3 == null) {
+                                mutableData.setValue(valor3);
+                        } else {
+                                mutableData.setValue(value3 + valor3);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaIntensidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value4 = mutableData.getValue(double.class);
+                        if (value4 == null) {
+                                mutableData.setValue(valor4);
+                        } else {
+                                mutableData.setValue(value4 + valor4);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaPeristencia.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value5 = mutableData.getValue(double.class);
+                        if (value5 == null) {
+                                mutableData.setValue(valor5);
+                        } else {
+                                mutableData.setValue(value5 + valor5);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaCalidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value6 = mutableData.getValue(double.class);
+                        if (value6 == null) {
+                                mutableData.setValue(valor6);
+                        } else {
+                                mutableData.setValue(value6 + valor6);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upArmonia.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value7 = mutableData.getValue(double.class);
+                        if (value7 == null) {
+                                mutableData.setValue(valor7);
+                        } else {
+                                mutableData.setValue(value7 + valor7);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+
         if (testea =="puede") {
-        insertVista.setValue(valor1);
-        insertOlfatoIntensidad.setValue(valor2);
-        insertOlfatoCalidad.setValue(valor3);
-        insertBocaIntensidad.setValue(valor4);
-        insertBocaPersistencia.setValue(valor5);
-        insertBocaCalidad.setValue(valor6);
-        insertArmonia.setValue(valor7);
-        double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
-        total.setValue(total1);
+        //double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
+        //total.setValue(total1);
 
             Intent activity = new Intent(getApplicationContext(), wineSelection.class);
             activity.putExtra("siDeje",1 );

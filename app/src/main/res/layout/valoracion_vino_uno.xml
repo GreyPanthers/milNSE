@@ -103,7 +103,8 @@
             android:layout_alignTop="@+id/iconoolfatointensidad"
             android:layout_gravity="center"
             android:numStars="7"
-            android:stepSize="1"/>
+            android:stepSize="1"
+            />
 
         <TextView
             android:id="@+id/mensajeOlfatoIntensidad"
@@ -282,7 +283,7 @@
             android:layout_alignTop="@+id/iconobocapersistencia"
             android:layout_gravity="center"
             android:numStars="7"
-            android:stepSize="1"/>
+            android:stepSize="1" />
 
         <TextView
             android:id="@+id/mensajeBocaPersistencia"

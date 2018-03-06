@@ -13,33 +13,34 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
 
 public class valoracionVinoTres extends AppCompatActivity {
 
-    private TextView mensajeVista, mensajeOlfatoIntensidad,mensajeOlfatoCalidad,mensajeBocaIntensidad,mensajeBocaPersistencia,mensajeBocaCalidad,mensajeArmonia;
-    private RatingBar ratingVista,ratingOlfatoIntensidad,ratingOlfatoCalidad,ratingBocaIntensidad,ratingBocaPersistencia,ratingBocaCalidad,ratingArmonia;
-    private double dato, mensaje, valor1,valor2,valor3,valor4,valor5,valor6,valor7;
-    private double value1,value2,value3,value4,value5,value6,value7;
-    private String observacion;
-    private String testea = "puede";
+private TextView mensajeVista, mensajeOlfatoIntensidad,mensajeOlfatoCalidad,mensajeBocaIntensidad,mensajeBocaPersistencia,mensajeBocaCalidad,mensajeArmonia;
+private RatingBar ratingVista,ratingOlfatoIntensidad,ratingOlfatoCalidad,ratingBocaIntensidad,ratingBocaPersistencia,ratingBocaCalidad,ratingArmonia;
+private double dato, mensaje, valor1,valor2,valor3,valor4,valor5,valor6,valor7;
+private double value1,value2,value3,value4,value5,value6,value7;
+private String observacion;
+private String testea = "puede";
+public int siDeje=0;
+
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference insertVista = ref.child("ValVino3").child("Vista");
+        DatabaseReference insertOlfatoIntensidad = ref.child("ValVino3").child("OlfatoInt");
+        DatabaseReference insertOlfatoCalidad = ref.child("ValVino3").child("OlfatoCal");
+        DatabaseReference insertBocaIntensidad = ref.child("ValVino3").child("BocaInt");
+        DatabaseReference insertBocaPersistencia = ref.child("ValVino3").child("BocaPer");
+        DatabaseReference insertBocaCalidad = ref.child("ValVino3").child("BocaCal");
+        DatabaseReference insertArmonia = ref.child("ValVino3").child("Armonia");
+        DatabaseReference total = ref.child("ValVino3").child("Total");
 
 
 
-    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference insertVista = ref.child("ValVino3").child("Vista");
-    DatabaseReference insertOlfatoIntensidad = ref.child("ValVino3").child("OlfatoInt");
-    DatabaseReference insertOlfatoCalidad = ref.child("ValVino3").child("OlfatoCal");
-    DatabaseReference insertBocaIntensidad = ref.child("ValVino3").child("BocaInt");
-    DatabaseReference insertBocaPersistencia = ref.child("ValVino3").child("BocaPer");
-    DatabaseReference insertBocaCalidad = ref.child("ValVino3").child("BocaCal");
-    DatabaseReference insertArmonia = ref.child("ValVino3").child("Armonia");
-    DatabaseReference total = ref.child("ValVino3").child("Total");
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.valoracion_vino_tres);
 
@@ -58,476 +59,546 @@ public class valoracionVinoTres extends AppCompatActivity {
         mensajeArmonia = (TextView) findViewById(R.id.mensajeArmonia);
         ratingArmonia = (RatingBar) findViewById(R.id.ratingArmonia);
 
-        //Botón Leyenda
-        Button b = (Button) findViewById(R.id.bLeyendaId);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(valoracionVinoTres.this,PopLeyenda.class));
-            }
-        });
+
 
 
         ratingVista.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarVista();
-            }
+        modificarVista();
+        }
         });
         ratingOlfatoIntensidad.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarOlfatoIntensidad();
-            }
+        modificarOlfatoIntensidad();
+        }
         });
         ratingOlfatoCalidad.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarOlfatoCalidad();
-            }
+        modificarOlfatoCalidad();
+        }
         });
         ratingBocaIntensidad.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarBocaIntensidad();
-            }
+        modificarBocaIntensidad();
+        }
         });
         ratingBocaPersistencia.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarBocaPersistencia();
-            }
+        modificarBocaPersistencia();
+        }
         });
         ratingBocaCalidad.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarBocaCalidad();
-            }
+        modificarBocaCalidad();
+        }
         });
         ratingArmonia.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+@Override
+public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-                modificarArmonia();
-            }
-        });
-
-    }
-    @Override
-    protected void onStart(){
-        super.onStart();
-
-        insertVista.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value1 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertOlfatoIntensidad.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value2 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertOlfatoCalidad.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value3 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertBocaIntensidad.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value4 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertBocaPersistencia.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value5 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertBocaCalidad.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value6 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-        insertArmonia.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value7 = dataSnapshot.getValue(double.class);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
+        modificarArmonia();
+        }
         });
 
+        //Botón Leyenda
+        Button b = (Button) findViewById(R.id.bLeyendaId);
+        b.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                        startActivity(new Intent (valoracionVinoTres.this,PopLeyenda.class));
+                }
+        });
 
-    }
+        }
 
 
-    public void modificarVista (){
+
+
+public void modificarVista (){
         mensaje = ratingVista.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor1= dato+value1;
-            observacion = "Eliminado";
-            mensajeVista.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor1= dato+value1;
+        observacion = "Eliminado";
+        mensajeVista.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 2;
-            valor1= dato+value1;
-            observacion ="Insuficiente";
-            mensajeVista.setText(observacion);
+        dato = 2;
+        valor1= dato+value1;
+        observacion ="Insuficiente";
+        mensajeVista.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 5;
-            valor1= dato+value1;
-            observacion ="Regular";
-            mensajeVista.setText(observacion);
+        dato = 5;
+        valor1= dato+value1;
+        observacion ="Regular";
+        mensajeVista.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 7;
-            valor1= dato+value1;
-            observacion ="Correcto";
-            mensajeVista.setText(observacion);
+        dato = 7;
+        valor1= dato+value1;
+        observacion ="Correcto";
+        mensajeVista.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 10;
-            valor1= dato+value1;
-            observacion ="Bueno";
-            mensajeVista.setText(observacion);
+        dato = 10;
+        valor1= dato+value1;
+        observacion ="Bueno";
+        mensajeVista.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 14;
-            valor1= dato+value1;
-            observacion ="Muy bueno";
-            mensajeVista.setText(observacion);
+        dato = 14;
+        valor1= dato+value1;
+        observacion ="Muy bueno";
+        mensajeVista.setText(observacion);
         }
         else {
-            dato = 16;
-            valor1= dato+value1;
-            observacion ="Excelente";
-            mensajeVista.setText(observacion);
+        dato = 16;
+        valor1= dato+value1;
+        observacion ="Excelente";
+        mensajeVista.setText(observacion);
         }
-    }
-    public void modificarOlfatoIntensidad (){
+        }
+public void modificarOlfatoIntensidad (){
         mensaje = ratingOlfatoIntensidad.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor2= dato+value2;
-            observacion = "Eliminado";
-            mensajeOlfatoIntensidad.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor2= dato+value2;
+        observacion = "Eliminado";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 2;
-            valor2= dato+value2;
-            observacion ="Insuficiente";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 2;
+        valor2= dato+value2;
+        observacion ="Insuficiente";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 4;
-            valor2= dato+value2;
-            observacion ="Regular";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 4;
+        valor2= dato+value2;
+        observacion ="Regular";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 6;
-            valor2= dato+value2;
-            observacion ="Correcto";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 6;
+        valor2= dato+value2;
+        observacion ="Correcto";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 8;
-            valor2= dato+value2;
-            observacion ="Bueno";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 8;
+        valor2= dato+value2;
+        observacion ="Bueno";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 10;
-            valor2= dato+value2;
-            observacion ="Muy bueno";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 10;
+        valor2= dato+value2;
+        observacion ="Muy bueno";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
         else {
-            dato = 12;
-            valor2= dato+value2;
-            observacion ="Excelente";
-            mensajeOlfatoIntensidad.setText(observacion);
+        dato = 12;
+        valor2= dato+value2;
+        observacion ="Excelente";
+        mensajeOlfatoIntensidad.setText(observacion);
         }
-    }
-    public void modificarOlfatoCalidad (){
+        }
+public void modificarOlfatoCalidad (){
         mensaje = ratingOlfatoCalidad.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor3= dato+value3;
-            observacion = "Eliminado";
-            mensajeOlfatoCalidad.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor3= dato+value3;
+        observacion = "Eliminado";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 5;
-            valor3= dato+value3;
-            observacion ="Insuficiente";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 5;
+        valor3= dato+value3;
+        observacion ="Insuficiente";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 8;
-            valor3= dato+value3;
-            observacion ="Regular";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 8;
+        valor3= dato+value3;
+        observacion ="Regular";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 11;
-            valor3= dato+value3;
-            observacion ="Correcto";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 11;
+        valor3= dato+value3;
+        observacion ="Correcto";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 14;
-            valor3= dato+value3;
-            observacion ="Bueno";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 14;
+        valor3= dato+value3;
+        observacion ="Bueno";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 17;
-            valor3= dato+value3;
-            observacion ="Muy bueno";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 17;
+        valor3= dato+value3;
+        observacion ="Muy bueno";
+        mensajeOlfatoCalidad.setText(observacion);
         }
         else {
-            dato = 20;
-            valor3= dato+value3;
-            observacion ="Excelente";
-            mensajeOlfatoCalidad.setText(observacion);
+        dato = 20;
+        valor3= dato+value3;
+        observacion ="Excelente";
+        mensajeOlfatoCalidad.setText(observacion);
         }
-    }
-    public void modificarBocaIntensidad(){
+        }
+public void modificarBocaIntensidad(){
         mensaje = ratingBocaIntensidad.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor4= dato+value4;
-            observacion = "Eliminado";
-            mensajeBocaIntensidad.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor4= dato+value4;
+        observacion = "Eliminado";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 2;
-            valor4= dato+value4;
-            observacion ="Insuficiente";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 2;
+        valor4= dato+value4;
+        observacion ="Insuficiente";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 3;
-            valor4= dato+value4;
-            observacion ="Regular";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 3;
+        valor4= dato+value4;
+        observacion ="Regular";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 5;
-            valor4= dato+value4;
-            observacion ="Correcto";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 5;
+        valor4= dato+value4;
+        observacion ="Correcto";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 7;
-            valor4= dato+value4;
-            observacion ="Bueno";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 7;
+        valor4= dato+value4;
+        observacion ="Bueno";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 9;
-            valor4= dato+value4;
-            observacion ="Muy bueno";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 9;
+        valor4= dato+value4;
+        observacion ="Muy bueno";
+        mensajeBocaIntensidad.setText(observacion);
         }
         else {
-            dato = 11;
-            valor4= dato+value4;
-            observacion ="Excelente";
-            mensajeBocaIntensidad.setText(observacion);
+        dato = 11;
+        valor4= dato+value4;
+        observacion ="Excelente";
+        mensajeBocaIntensidad.setText(observacion);
         }
-    }
-    public void modificarBocaPersistencia(){
+        }
+public void modificarBocaPersistencia(){
         mensaje = ratingBocaPersistencia.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor5= dato+value5;
-            observacion = "Eliminado";
-            mensajeBocaPersistencia.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor5= dato+value5;
+        observacion = "Eliminado";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 2;
-            valor5= dato+value5;
-            observacion ="Insuficiente";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 2;
+        valor5= dato+value5;
+        observacion ="Insuficiente";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 3;
-            valor5= dato+value5;
-            observacion ="Regular";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 3;
+        valor5= dato+value5;
+        observacion ="Regular";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 5;
-            valor5= dato+value5;
-            observacion ="Correcto";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 5;
+        valor5= dato+value5;
+        observacion ="Correcto";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 7;
-            valor5= dato+value5;
-            observacion ="Bueno";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 7;
+        valor5= dato+value5;
+        observacion ="Bueno";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 9;
-            valor5= dato+value5;
-            observacion ="Muy bueno";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 9;
+        valor5= dato+value5;
+        observacion ="Muy bueno";
+        mensajeBocaPersistencia.setText(observacion);
         }
         else {
-            dato = 11;
-            valor5= dato+value5;
-            observacion ="Excelente";
-            mensajeBocaPersistencia.setText(observacion);
+        dato = 11;
+        valor5= dato+value5;
+        observacion ="Excelente";
+        mensajeBocaPersistencia.setText(observacion);
         }
-    }
-    public void modificarBocaCalidad(){
+        }
+public void modificarBocaCalidad(){
         mensaje = ratingBocaCalidad.getRating();
         if (mensaje == 1){
-            dato = 0;
-            valor6= dato+value6;
-            observacion = "Eliminado";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 0;
+        valor6= dato+value6;
+        observacion = "Eliminado";
+        mensajeBocaCalidad.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 5;
-            valor6= dato+value6;
-            observacion ="Insuficiente";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 5;
+        valor6= dato+value6;
+        observacion ="Insuficiente";
+        mensajeBocaCalidad.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 8;
-            valor6= dato+value6;
-            observacion ="Regular";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 8;
+        valor6= dato+value6;
+        observacion ="Regular";
+        mensajeBocaCalidad.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 11;
-            valor6= dato+value6;
-            observacion ="Correcto";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 11;
+        valor6= dato+value6;
+        observacion ="Correcto";
+        mensajeBocaCalidad.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 14;
-            valor6= dato+value6;
-            observacion ="Bueno";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 14;
+        valor6= dato+value6;
+        observacion ="Bueno";
+        mensajeBocaCalidad.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 17;
-            valor6= dato+value6;
-            observacion ="Muy bueno";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 17;
+        valor6= dato+value6;
+        observacion ="Muy bueno";
+        mensajeBocaCalidad.setText(observacion);
         }
         else {
-            dato = 20;
-            valor6= dato+value6;
-            observacion ="Excelente";
-            mensajeBocaCalidad.setText(observacion);
+        dato = 20;
+        valor6= dato+value6;
+        observacion ="Excelente";
+        mensajeBocaCalidad.setText(observacion);
         }
-    }
-    public void modificarArmonia(){
+        }
+public void modificarArmonia(){
         mensaje = ratingArmonia.getRating();
-        if (mensaje == 1){
-            dato = 0;
-            valor7= dato+value7;
-            observacion = "Eliminado";
-            mensajeArmonia.setText(observacion);
+        if (mensaje == 1 || mensaje==0){
+        dato = 0;
+        valor7= dato+value7;
+        observacion = "Eliminado";
+        mensajeArmonia.setText(observacion);
         }
         else if (mensaje == 2){
-            dato = 2;
-            valor7= dato+value7;
-            observacion ="Insuficiente";
-            mensajeArmonia.setText(observacion);
+        dato = 2;
+        valor7= dato+value7;
+        observacion ="Insuficiente";
+        mensajeArmonia.setText(observacion);
         }
         else if (mensaje == 3){
-            dato = 4;
-            valor7= dato+value7;
-            observacion ="Regular";
-            mensajeArmonia.setText(observacion);
+        dato = 4;
+        valor7= dato+value7;
+        observacion ="Regular";
+        mensajeArmonia.setText(observacion);
         }
         else if (mensaje == 4){
-            dato = 5;
-            valor7= dato+value7;
-            observacion ="Correcto";
-            mensajeArmonia.setText(observacion);
+        dato = 5;
+        valor7= dato+value7;
+        observacion ="Correcto";
+        mensajeArmonia.setText(observacion);
         }
         else if (mensaje == 5){
-            dato = 7;
-            valor7= dato+value7;
-            observacion ="Bueno";
-            mensajeArmonia.setText(observacion);
+        dato = 7;
+        valor7= dato+value7;
+        observacion ="Bueno";
+        mensajeArmonia.setText(observacion);
         }
         else if (mensaje == 6){
-            dato = 9;
-            valor7= dato+value7;
-            observacion ="Muy bueno";
-            mensajeArmonia.setText(observacion);
+        dato = 9;
+        valor7= dato+value7;
+        observacion ="Muy bueno";
+        mensajeArmonia.setText(observacion);
         }
         else {
-            dato = 10;
-            valor7= dato+value7;
-            observacion ="Excelente";
-            mensajeArmonia.setText(observacion);
+        dato = 10;
+        valor7= dato+value7;
+        observacion ="Excelente";
+        mensajeArmonia.setText(observacion);
         }
-    }
-    public void enviar (View view){
+        }
+
+
+
+public void enviar (final View view){
+
+        DatabaseReference upVista = insertVista;
+        DatabaseReference upOlfatoIntensidad = insertOlfatoIntensidad;
+        DatabaseReference upOlfatoCalidad = insertOlfatoCalidad;
+        DatabaseReference upBocaIntensidad = insertBocaIntensidad;
+        DatabaseReference upBocaPeristencia = insertBocaPersistencia;
+        DatabaseReference upBocaCalidad = insertBocaCalidad;
+        DatabaseReference upArmonia = insertArmonia;
+        DatabaseReference upTotal = total;
+
+
+                upVista.runTransaction(new Transaction.Handler() {
+                        @Override
+                        public Transaction.Result doTransaction(MutableData mutableData) {
+                                Double value1 = mutableData.getValue(double.class);
+                                if (value1 == null) {
+                                        mutableData.setValue(valor1);
+                                } else {
+                                        mutableData.setValue(value1 + valor1);
+                                }
+
+                                return Transaction.success(mutableData);
+                        }
+
+                        @Override
+                        public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                                System.out.println("Transaction completed");
+                        }
+                });
+        upOlfatoIntensidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value2 = mutableData.getValue(double.class);
+                        if (value2 == null) {
+                                mutableData.setValue(valor2);
+                        } else {
+                                mutableData.setValue(value2 + valor2);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upOlfatoCalidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value3 = mutableData.getValue(double.class);
+                        if (value3 == null) {
+                                mutableData.setValue(valor3);
+                        } else {
+                                mutableData.setValue(value3 + valor3);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaIntensidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value4 = mutableData.getValue(double.class);
+                        if (value4 == null) {
+                                mutableData.setValue(valor4);
+                        } else {
+                                mutableData.setValue(value4 + valor4);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaPeristencia.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value5 = mutableData.getValue(double.class);
+                        if (value5 == null) {
+                                mutableData.setValue(valor5);
+                        } else {
+                                mutableData.setValue(value5 + valor5);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upBocaCalidad.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value6 = mutableData.getValue(double.class);
+                        if (value6 == null) {
+                                mutableData.setValue(valor6);
+                        } else {
+                                mutableData.setValue(value6 + valor6);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+        upArmonia.runTransaction(new Transaction.Handler() {
+                @Override
+                public Transaction.Result doTransaction(MutableData mutableData) {
+                        Double value7 = mutableData.getValue(double.class);
+                        if (value7 == null) {
+                                mutableData.setValue(valor7);
+                        } else {
+                                mutableData.setValue(value7 + valor7);
+                        }
+
+                        return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                        System.out.println("Transaction completed");
+                }
+        });
+
         if (testea =="puede") {
-            insertVista.setValue(valor1);
-            insertOlfatoIntensidad.setValue(valor2);
-            insertOlfatoCalidad.setValue(valor3);
-            insertBocaIntensidad.setValue(valor4);
-            insertBocaPersistencia.setValue(valor5);
-            insertBocaCalidad.setValue(valor6);
-            insertArmonia.setValue(valor7);
-            double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
-            total.setValue(total1);
+        //double total1 = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6 + valor7);
+        //total.setValue(total1);
+
             Intent activity = new Intent(getApplicationContext(), wineSelection.class);
+            activity.putExtra("siDeje3",1 );
             startActivity(activity);
 
-            testea="ya no";
-            Toast.makeText(this, "Encuesta realizada correctamente", Toast.LENGTH_LONG).show();
+        testea="ya no";
+        Toast.makeText(this, "Encuesta realizada correctamente", Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "ya ha insertado un dato no puede insertar mas", Toast.LENGTH_LONG).show();
         }
-    }
-}
+        }
+        }
 
 
 
